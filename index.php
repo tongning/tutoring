@@ -52,6 +52,7 @@
 			</header>
 			
 			<div class="main-form">
+				<img src="images/blazer.gif" width="90" style="position:relative; top:30px; left:-90px;"/>
 				<form class="form-1">
 					<p class="field">
 						<input type="text" name="login" placeholder="Student ID #">
