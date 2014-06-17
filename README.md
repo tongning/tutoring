@@ -6,3 +6,5 @@ Live Helper Chat (livehelperchat.com).  This implementation adds the following f
 -Login form to restrict users to students
 
 -Menu allowing users to select a subject from a list
+
+-Themed pages for each subject
