@@ -297,5 +297,8 @@ p {
 				</form>
 			</div> <!--close main div-->
         </div>
+		<div class="adm-link" style="position:absolute; bottom: 2px; left: 2px;">
+			<a href="http://tutors.mbhs.edu/lhc/index.php/site_admin/user/login">Admin</a>
+		</div>
     </body>
 </html>
