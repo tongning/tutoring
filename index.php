@@ -50,12 +50,126 @@
 				</div>
 				
 			</header>
-			
+			<?php
+				$errcode=htmlentities($_GET['error']);
+				if($errcode==1){
+					echo('
+					<style type="text/css">
+					alert {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	/* for demo only */
+	margin: 8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h4 {
+font-size: 14px;
+}
+h4, h5, h6 {
+line-height: 18px;
+}
+
+p {
+  margin: 0 0 9px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.close:hover {
+  color: #000000;
+  text-decoration: none;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  cursor: pointer;
+}
+
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #c09853;
+  width:400px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.alert-heading {
+  color: inherit;
+}
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  line-height: 18px;
+}
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+.alert-danger,
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #3a87ad;
+}
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+.alert-block p + p {
+  margin-top: 5px;
+}
+					</style>
+<div class="alert alert-error">
+  
+  <strong>Hmm, </strong> that doesn\'t look like a valid id/password.  Try again?
+</div>	
+					');
+				} 
+			?>
 			<div class="main-form">
+			
 				<img src="images/blazer.gif" width="90" style="position:relative; top:30px; left:-90px;"/>
-				<form class="form-1">
+				<form class="form-1" action="login.php" method="post">
 					<p class="field">
-						<input type="text" name="login" placeholder="Student ID #">
+						<input type="text" name="stuid" placeholder="Student ID #">
 						<i class="icon-user icon-large"></i>
 					</p>
 						<p class="field">
