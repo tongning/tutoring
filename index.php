@@ -28,6 +28,9 @@
                     </a>
                 </span>
 				-->
+				<?php
+				include_once('header.php');
+				?>
             </div><!--/ Codrops top bar -->
 			
 			<header>

@@ -121,6 +121,11 @@ left:2%;
 .codrops-top span.right {
 	float: right;
 }
+.codrops-top span.center{
+	float: left;
+	position:relative;
+	left:10%;
+}
 
 .codrops-top span.right a {
 	float: left;

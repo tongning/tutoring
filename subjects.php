@@ -37,6 +37,9 @@ if($_SESSION['logged_in']==1){
                     </a>
                 </span>
 				-->
+				<?php
+				include_once('header.php');
+				?>
             </div><!--/ Codrops top bar -->
 			
 			<header>
@@ -52,6 +55,7 @@ if($_SESSION['logged_in']==1){
 					<a href="index4.html">Demo 4</a>
 					<a href="index5.html">Demo 5</a>
 					-->
+					
 				</nav>
 
 				<div class="support-note">
