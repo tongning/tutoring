@@ -31,10 +31,10 @@
             </div><!--/ Codrops top bar -->
 			
 			<header>
-			
+			<div class="intro">
 				<h1>Need <strong>study help?</strong></h1>
 				<h2>Enter your student ID and password below to start chatting with Blair's student tutors!</h2>
-				
+			</div>
 				<nav class="codrops-demos">
 					<!--
 					<a class="current-demo" href="index.html">Demo 1</a>

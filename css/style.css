@@ -59,7 +59,14 @@ width:500px;
 .form-1 .field {
     position: relative; /* For the icon positioning */
 }
-
+.intro{
+	position:relative;
+	left:23%;
+	width:600px;
+	background-color:rgba(100,100,100,0.5);
+	border-radius:25px;
+	text-align:center;
+}
 .form-1 .field i {
     /* Size and position */
     left: 0px;
