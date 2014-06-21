@@ -17,12 +17,8 @@ if($_SESSION['logged_in']==1){
 		<script src="js/modernizr.custom.63321.js"></script>
 		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
 		<style type="text/css">
-		.main-form a {
+		.main-form a:link {
 			color:#FFF;
-			
-		}
-		.main-form {
-			height:300px;
 		}
 		</style>
 	</head>
@@ -48,8 +44,8 @@ if($_SESSION['logged_in']==1){
 			
 			<header>
 			<div class="intro">
-				<h1>Welcome, <?php echo $_SESSION['fname'];?></h1>
-				<h2>Select a subject below to start chatting.  <a href="logout.php" style="color: #FFF; text-decoration:underline;">Log out</a></h2>
+				<h1>Spanish</h1>
+				<h2>Enter your question below.  <a href="subjects.php" style="color: #FFF; text-decoration:underline;">Back to subjects</a>&nbsp;&nbsp;<a href="logout.php" style="color: #FFF; text-decoration:underline;">Log out (<?php echo $_SESSION['fname'];?>)</a></h2>
 			</div>
 				<nav class="codrops-demos">
 					<!--
@@ -70,11 +66,18 @@ if($_SESSION['logged_in']==1){
 			
 			<div class="main-form">
 			
-				<h1><a href="french.php">French</a></h1><br>
-				<h1><a href="spanish.php">Spanish</a></h1><br>
-				<h1><a href="worldhist.php">World History</a></h1><br>
-				<h1><a href="nsl.php">US Government</a></h1><br>
-				<h1><a href="ushist.php">US History</a></h1><br>
+				<!-- Place this tag where you want the Live Helper Plugin to render. -->
+				<div id="lhc_status_container_page" style="label {color:#FFF;}" ></div>
+				<!-- Place this tag after the Live Helper Plugin tag. -->
+<script type="text/javascript">
+var LHCChatOptionsPage = {};
+LHCChatOptionsPage.opt = {};
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = '//tutors.mbhs.edu/lhc/index.php/chat/getstatusembed/(department)/3';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
 			</div> <!--close main div-->
         </div>
     </body>
