@@ -117,8 +117,9 @@
     border-radius: 4px;
     color: #c09853;
     width:400px;
-    margin-left:auto;
-    margin-right:auto;
+	position:relative;
+    left:30%;
+    
   }
   .alert-heading {
     color: inherit;
@@ -226,8 +227,8 @@
     border-radius: 4px;
     color: #c09853;
     width:400px;
-    margin-left:auto;
-    margin-right:auto;
+    position:relative;
+    left:30%;
   }
   .alert-heading {
     color: inherit;

@@ -49,7 +49,7 @@ if($_SESSION['logged_in']==1){
 			<header>
 			<div class="intro">
 				<h1>Welcome, <?php echo $_SESSION['fname'];?></h1>
-				<h2>Select a subject below to start chatting.  <a href="logout.php" style="color: #FFF; text-decoration:underline;">Log out</a></h2>
+				<h2>Select a subject below to speak with Blair's student tutors.  <a href="logout.php" style="color: #FFF; text-decoration:underline;">Log out</a></h2>
 			</div>
 				<nav class="codrops-demos">
 					<!--
