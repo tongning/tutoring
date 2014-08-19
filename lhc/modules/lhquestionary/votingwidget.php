@@ -27,6 +27,28 @@ if ((string)$Params['user_parameters_unordered']['mode'] == 'embed') {
 	$modeAppend = '/(mode)/embed';
 }
 
+if (isset($Params['user_parameters_unordered']['theme']) && (int)$Params['user_parameters_unordered']['theme'] > 0){
+	try {
+		$theme = erLhAbstractModelWidgetTheme::fetch($Params['user_parameters_unordered']['theme']);
+		$Result['theme'] = $theme;
+		$modeAppend .= '/(theme)/'.$theme->id;
+	} catch (Exception $e) {
+
+	}
+} else {
+	$defaultTheme = erLhcoreClassModelChatConfig::fetch('default_theme_id')->current_value;
+	if ($defaultTheme > 0) {
+		try {
+			$theme = erLhAbstractModelWidgetTheme::fetch($defaultTheme);
+			$Result['theme'] = $theme;
+			$modeAppend .= '/(theme)/'.$theme->id;
+		} catch (Exception $e) {
+			
+		}
+	}
+}
+
+
 $tpl->set('append_mode',$modeAppend);
 
 $votingRelative = erLhcoreClassQuestionary::getReletiveVoting($referer);

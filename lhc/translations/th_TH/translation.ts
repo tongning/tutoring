@@ -1,5 +1,200 @@
 <?xml version="1.0" ?><!DOCTYPE TS><TS language="th_TH">
   <context>
+    <name>listchatconfig</name>
+    <message>
+      <source>How many days voting widget should not be expanded after last show</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Use secure cookie, check this if you want to force SSL all the time</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Which ip should be allowed to update DB by executing http request, separate by comma?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Enable online site visitors tracking</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Track online visitors even if there is no online operators</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Track users footprint. For this also online visitors tracking should be enabled</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Set your domain to enable user tracking across different domain subdomains.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>How many days keep records of online users.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Suggest user to leave a message then user chooses offline department</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Play sound on invitation to chat.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Show users option to switch language at widget</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Between what languages user should be able to switch</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Use session captcha. LHC have to be installed on the same domain or subdomain.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Should cronjob run unanswered chats workflow and execute unaswered chats callback, 0 - no, any other number bigger than 0 is a minits how long chat have to be not accepted before executing callback.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Should cronjob run departments transfer workflow, even if user leaves a chat</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Reopen chat functionality enabled</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Reopen closed chat as new? Otherwise it will be reopened as active.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Should invitation logic be executed if there is no online operators</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Pro active chats invitations limitation based on pending chats, (-1) do not limit, (0,1,n+1) number of pending chats can be for invitation to be shown.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Is pro active chat invitation active. Online users tracking also has to be enabled</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help tooltip timeout, after how many hours show again tooltip?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Show need help tooltip?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Minimum phone number length</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Messages box height</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Proactive message timeout in hours. After how many hours proactive chat mesasge should be shown again.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Maximum message length in characters</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>List online operators.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Ignore users online statuses and use departments online hours</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Which ip should be ignored in online users list, separate by comma</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Hide disabled department widget</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Is visitor e-mail required for FAQ</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chats export secret hash</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Please enter explicit http mode. Either http: or https:, do not forget : at the end.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Disable chat transcript send</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Disable chat print</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Disable option in widget to open new window. Restore icon will be hidden</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Disable HMTL5 storage, check it if your site is switching between http and https</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Your site URL address</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Your company name - visible in bottom left corner</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Interval between chat status checks in seconds, 0 disabled.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Show BB Code button</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Automatic chats purging. 0 - disabled, n &gt; 0 time in minutes before chat is automatically deleted</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Automatically reopen chat on widget open</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Automatic chats closing. 0 - disabled, n &gt; 0 time in minutes before chat is automatically closed</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Support application name, visible in browser title.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Allow user to reopen closed chats?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Change to your site Terms of Service</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>How many seconds chat accept link is valid. Set 0 to force login all the time manually.</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
     <name>system/buttons</name>
     <message>
       <source>Save</source>
@@ -71,6 +266,176 @@
     <message>
       <source>Updated!</source>
       <translation>การปรับปรุง</translation>
+    </message>
+  </context>
+  <context>
+    <name>abstract/widgettheme</name>
+    <message>
+      <source>Download theme</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Status widget style</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget copyright</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget container</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help widget</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Custom CSS</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help header text</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help standard text</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Online status text</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Offline status text</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Background color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Status widget border color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Text color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Logo image, visible in popup</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Logo image, visible in widget left corner, 16x16</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Show copyright widget logo in left corner</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget copyright link</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Text above start chat form fields</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Online image</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Offline image</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget header background color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget border color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help background color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help hover background color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help text color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help border color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help close background color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help close hover background color</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Need help operator image</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Status widget additional CSS, takes effect after save</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget container additional CSS, takes effect after save</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget body additional CSS, takes effect after save</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget themes</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>chat/getstatus</name>
+    <message>
+      <source>Close</source>
+      <translation>ปิด</translation>
+    </message>
+    <message>
+      <source>Open in a new window</source>
+      <translation>เปิดในหน้าต่างใหม่</translation>
+    </message>
+    <message>
+      <source>Minimize/Restore</source>
+      <translation>ลด/คืน</translation>
+    </message>
+    <message>
+      <source>Live help is online...</source>
+      <translation>ออนไลน์อยู่ด้วย...</translation>
+    </message>
+    <message>
+      <source>Need help?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Our staff is always ready to help</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Live help is offline...</source>
+      <translation>ด้วยอยู่ในสถานะออฟไลน์...</translation>
     </message>
   </context>
   <context>
@@ -148,6 +513,10 @@
       <translation type="unfinished"/>
     </message>
     <message>
+      <source>Requires phone</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Show random operator profile</source>
       <translation>แสดงส่วนกำหนดค่าการดำเนินการแบบสุ่ม</translation>
     </message>
@@ -185,37 +554,6 @@
     <message>
       <source>Are you sure?</source>
       <translation>เธอแน่ใจหรือ</translation>
-    </message>
-  </context>
-  <context>
-    <name>chat/getstatus</name>
-    <message>
-      <source>Close</source>
-      <translation>ปิด</translation>
-    </message>
-    <message>
-      <source>Live help is online...</source>
-      <translation>ออนไลน์อยู่ด้วย...</translation>
-    </message>
-    <message>
-      <source>Live help is offline...</source>
-      <translation>ด้วยอยู่ในสถานะออฟไลน์...</translation>
-    </message>
-    <message>
-      <source>Open in a new window</source>
-      <translation>เปิดในหน้าต่างใหม่</translation>
-    </message>
-    <message>
-      <source>Minimize/Restore</source>
-      <translation>ลด/คืน</translation>
-    </message>
-    <message>
-      <source>Need help?</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Our staff is always ready to help</source>
-      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -269,6 +607,14 @@
       <translation>Chatbox สูงเนื้อหาข้อความ</translation>
     </message>
     <message>
+      <source>Theme</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Default</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Copy the code from the text area to the page where you want it to be rendered</source>
       <translation>คัดลอกรหัสจากพื้นที่ข้อความเพจที่คุณต้องการได้</translation>
     </message>
@@ -319,6 +665,10 @@
     <message>
       <source>Middle left side of the screen</source>
       <translation>กลางซ้ายของหน้าจอ</translation>
+    </message>
+    <message>
+      <source>Disable responsive layout for status widget.</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Disable minimize icon</source>
@@ -381,6 +731,14 @@
       <translation>ใด ๆ</translation>
     </message>
     <message>
+      <source>Operator ID</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>To what operator chat should be assigned automatically?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Copy the code from the text area to the page where you want your status to appear</source>
       <translation>คัดลอกรหัสจากบริเวณข้อความที่คุณต้องการให้สถานะของคุณปรากฏขึ้นที่หน้า</translation>
     </message>
@@ -431,6 +789,18 @@
     <message>
       <source>Native placement - it will be shown where the html is embedded</source>
       <translation>แม่วาง - จะแสดงที่ html ถูกฝัง</translation>
+    </message>
+    <message>
+      <source>Minimize action, applies only if status widget is at the bottom</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Keep where it was</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Minimize to bottom of the screen</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>System configuration</source>
@@ -487,11 +857,11 @@
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>List of forms</source>
+      <source>Forms</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Page embed code</source>
+      <source>Documents</source>
       <translation type="unfinished"/>
     </message>
     <message>
@@ -532,6 +902,53 @@
     <message>
       <source>Active chats</source>
       <translation>สนทนาที่ใช้งานอยู่</translation>
+    </message>
+  </context>
+  <context>
+    <name>chat/lists/search_panel</name>
+    <message>
+      <source>Delete selected</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Nick</source>
+      <translation>นิค</translation>
+    </message>
+    <message>
+      <source>E-mail</source>
+      <translation>อีเมล</translation>
+    </message>
+    <message>
+      <source>Date range from to</source>
+      <translation>ช่วงวันที่จากไป</translation>
+    </message>
+    <message>
+      <source>Department</source>
+      <translation>แผนก</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation>ผู้ใช้งาน</translation>
+    </message>
+    <message>
+      <source>Search</source>
+      <translation>ค้นหา</translation>
+    </message>
+    <message>
+      <source>Print</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Select department</source>
+      <translation>เลือก แผนก</translation>
+    </message>
+    <message>
+      <source>Select user</source>
+      <translation>เลือก ผู้ใช้งาน</translation>
+    </message>
+    <message>
+      <source>Type to search</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -683,6 +1100,10 @@
       <translation>ว่างเปล่า...</translation>
     </message>
     <message>
+      <source>Please enter an IP to block</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>User was blocked!</source>
       <translation>ผู้ใช้ถูกบล็อก</translation>
     </message>
@@ -721,6 +1142,10 @@
       <translation>ตำแหน่ง</translation>
     </message>
     <message>
+      <source>Auto send</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Edit message</source>
       <translation>แก้ไขข้อความ</translation>
     </message>
@@ -735,6 +1160,10 @@
     <message>
       <source>Edit canned message</source>
       <translation>ข้อแก้ไขที่กระป๋อง</translation>
+    </message>
+    <message>
+      <source>Automatically send this message to user then chat is accepted</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Delay in seconds</source>
@@ -761,12 +1190,28 @@
       <translation>กรุณาป้อนข้อความที่บรรจุกระป๋อง</translation>
     </message>
     <message>
+      <source>Please choose a department</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Please enter a canned message</source>
       <translation>กรุณาใส่ข้อความบรรจุกระป๋อง</translation>
     </message>
   </context>
   <context>
     <name>department/edit</name>
+    <message>
+      <source>Work hours, 24 hours format, 1 - 24</source>
+      <translation>ทำงานชั่วโมง 24 ชั่วโมงรูปแบบ 1-24</translation>
+    </message>
+    <message>
+      <source>From, E.g. 8</source>
+      <translation>จาก 8 เช่น</translation>
+    </message>
+    <message>
+      <source>To, E.g. 17</source>
+      <translation>การ เช่น 17</translation>
+    </message>
     <message>
       <source>Any</source>
       <translation type="unfinished"/>
@@ -844,19 +1289,27 @@
       <translation>วันอาทิตย์</translation>
     </message>
     <message>
-      <source>Work hours, 24 hours format, 1 - 24</source>
-      <translation>ทำงานชั่วโมง 24 ชั่วโมงรูปแบบ 1-24</translation>
+      <source>Work hours, 24 hours format, 1 - 24, minutes format 0 - 60</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>From, E.g. 8</source>
-      <translation>จาก 8 เช่น</translation>
+      <source>Hours from, E.g. 8</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>To, E.g. 17</source>
-      <translation>การ เช่น 17</translation>
+      <source>Minutes from, E.g. 30</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>Notifications about new chats</source>
+      <source>Hours to, E.g. 17</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Minutes to, E.g. 30</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Notifications</source>
       <translation type="unfinished"/>
     </message>
     <message>
@@ -900,6 +1353,10 @@
       <translation type="unfinished"/>
     </message>
     <message>
+      <source>Inform then chat is accepted by one of the staff members using</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Other</source>
       <translation type="unfinished"/>
     </message>
@@ -918,6 +1375,18 @@
     <message>
       <source>Timeout in seconds before chat is transfered to another department. Minimum 5 seconds.</source>
       <translation>การหมดเวลาเป็นวินาทีก่อนสนทนาจะถูกโอนย้ายไปที่แผนกอื่น อย่างน้อย 5 วินาที</translation>
+    </message>
+    <message>
+      <source>Execute new chat logic again for recipient department?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Execute unanswered chat logic again for recipient department?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Auto assignment</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -1010,6 +1479,10 @@
       <translation>ประเทศ</translation>
     </message>
     <message>
+      <source>Time zone</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>City</source>
       <translation>เมือง</translation>
     </message>
@@ -1090,7 +1563,7 @@
       <translation>พิมพ์</translation>
     </message>
     <message>
-      <source>Attatch uploaded file</source>
+      <source>Attach uploaded file</source>
       <translation type="unfinished"/>
     </message>
     <message>
@@ -1192,10 +1665,6 @@
       <translation>เพิ่มแชท</translation>
     </message>
     <message>
-      <source>Empty...</source>
-      <translation>ว่างเปล่า...</translation>
-    </message>
-    <message>
       <source>Start chat</source>
       <translation>เริ่มต้นสนทนา</translation>
     </message>
@@ -1230,6 +1699,10 @@
     <message>
       <source>s.</source>
       <translation>s</translation>
+    </message>
+    <message>
+      <source>Empty...</source>
+      <translation>ว่างเปล่า...</translation>
     </message>
   </context>
   <context>
@@ -1345,6 +1818,14 @@
       <translation>เริ่มต้นสนทนา</translation>
     </message>
     <message>
+      <source>Live support is not available in your country</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Live Support</source>
+      <translation>สนับสนุนถ่ายทอดสด</translation>
+    </message>
+    <message>
       <source>There are no online operators at the moment, please leave a message</source>
       <translation>มีผู้ประกอบการไม่ออนไลน์อยู่ในขณะนี้ กรุณาฝากข้อความไว้</translation>
     </message>
@@ -1373,6 +1854,22 @@
       <translation>ออฟไลน์</translation>
     </message>
     <message>
+      <source>Department is offline</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Go to leave a message form</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Cancel and choose another department</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>characters</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Type your message here and hit enter to send...</source>
       <translation>พิมพ์ข้อความ และป้อนตีส่ง...</translation>
     </message>
@@ -1391,6 +1888,10 @@
     <message>
       <source>There are no online operators at the moment, please leave your message</source>
       <translation>มีผู้ประกอบการไม่ออนไลน์อยู่ในขณะนี้ กรุณาฝากข้อความของคุณ</translation>
+    </message>
+    <message>
+      <source>Choose your language</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>You do not have permission to chat! Please contact site owner.</source>
@@ -1445,10 +1946,6 @@
       <translation>จำเป็นต้องมี</translation>
     </message>
     <message>
-      <source>Live Support</source>
-      <translation>สนับสนุนถ่ายทอดสด</translation>
-    </message>
-    <message>
       <source>Please enter a message, max characters</source>
       <translation type="unfinished"/>
     </message>
@@ -1478,6 +1975,10 @@
     <message>
       <source>At this moment there are no logged in support staff members, but you can leave your messages</source>
       <translation>ตอนนี้มีอยู่ในระบบไม่มีการสนับสนุน พนักงาน แต่คุณสามารถฝากข้อความของคุณ</translation>
+    </message>
+    <message>
+      <source>Visitor has been redirected to contact form</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -1577,6 +2078,208 @@
     <message>
       <source>Please enter text!</source>
       <translation>โปรดป้อนข้อความ</translation>
+    </message>
+  </context>
+  <context>
+    <name>chat/geoadjustment</name>
+    <message>
+      <source>GEO adjustment</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Apply to chat widget status indicator these rules also? performance decrease is associated with this option</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Make chat status normal for these countries, countries can be separated by comma &quot;de,gb,us,fr&quot; means chat would be shown as usual only for these countries.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>For</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>all</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>custom</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>E.g. ar,pl</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Other countries, put widget/chat status to</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>offline status</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>hidden/disabled, widget will not be shown</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>For unmatched countries put chat status to</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>normal status</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>system/xmpp</name>
+    <message>
+      <source>Geo adjustments active</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Settings updated</source>
+      <translation>การตั้งค่าการปรับปรุง</translation>
+    </message>
+    <message>
+      <source>XMPP settings</source>
+      <translation>การตั้งค่า XMPP</translation>
+    </message>
+    <message>
+      <source>XMPP active</source>
+      <translation>XMPP ใช้งานอยู่</translation>
+    </message>
+    <message>
+      <source>XMPP Message content</source>
+      <translation>เนื้อหาข้อความ XMPP</translation>
+    </message>
+    <message>
+      <source>XMPP Message about accepted chat</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>XMPP</source>
+      <translation>XMPP</translation>
+    </message>
+    <message>
+      <source>Use standard XMPP service</source>
+      <translation>ใช้บริการ XMPP มาตรฐาน</translation>
+    </message>
+    <message>
+      <source>Host</source>
+      <translation>โฮสต์</translation>
+    </message>
+    <message>
+      <source>Port</source>
+      <translation>พอร์ต</translation>
+    </message>
+    <message>
+      <source>Login</source>
+      <translation>เข้าสู่ระบบ</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>รหัสผ่าน</translation>
+    </message>
+    <message>
+      <source>Resource</source>
+      <translation>ทรัพยากร</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>เซิร์ฟเวอร์</translation>
+    </message>
+    <message>
+      <source>Recipients</source>
+      <translation>ผู้รับ</translation>
+    </message>
+    <message>
+      <source>Default recipients</source>
+      <translation>ผู้รับค่าเริ่มต้น</translation>
+    </message>
+    <message>
+      <source>Test recipients</source>
+      <translation>ผู้รับการทดสอบ</translation>
+    </message>
+    <message>
+      <source>Individual recipients</source>
+      <translation>ผู้รับแต่ละ</translation>
+    </message>
+    <message>
+      <source>Test group recipients</source>
+      <translation>ทดสอบกลุ่มผู้รับ</translation>
+    </message>
+    <message>
+      <source>Test message will be send to your account e-mail</source>
+      <translation>ทดสอบข้อความจะถูกส่งอีเมลบัญชีของคุณ</translation>
+    </message>
+    <message>
+      <source>GTalk</source>
+      <translation>GTalk</translation>
+    </message>
+    <message>
+      <source>Use GTalk for messaging</source>
+      <translation>ใช้ GTalk สำหรับข้อความ</translation>
+    </message>
+    <message>
+      <source>Information for your google app</source>
+      <translation>ข้อมูลของคุณ google app</translation>
+    </message>
+    <message>
+      <source>Redirect URL, this url you will have to enter in your google app configuration</source>
+      <translation>เปลี่ยนเส้นทาง URL, url นี้คุณจะต้องป้อนในการกำหนดค่าของคุณ google app</translation>
+    </message>
+    <message>
+      <source>Enter your app information bellow</source>
+      <translation>ใส่ซอลเบลโลว์ข้อมูลโปรแกรมประยุกต์ของคุณ</translation>
+    </message>
+    <message>
+      <source>OAuth 2.0 Client ID</source>
+      <translation>รหัสไคลเอนต์ OAuth 2.0</translation>
+    </message>
+    <message>
+      <source>Please enter your Client ID</source>
+      <translation>โปรดป้อนหมายเลขของไคลเอนต์</translation>
+    </message>
+    <message>
+      <source>Client secret</source>
+      <translation>ความลับของลูกค้า</translation>
+    </message>
+    <message>
+      <source>This message will be send to your e-mail</source>
+      <translation>ข้อความนี้จะถูกส่งไปยังอีเมลของคุณ</translation>
+    </message>
+    <message>
+      <source>Send test message</source>
+      <translation>ส่งข้อความทดสอบ</translation>
+    </message>
+    <message>
+      <source>Revoke access token</source>
+      <translation>ยกเลิกการโทเค็นการเข้าถึง</translation>
+    </message>
+    <message>
+      <source>Revoke permission to send a message</source>
+      <translation>ยกเลิกสิทธิ์ในการส่งข้อความ</translation>
+    </message>
+    <message>
+      <source>Authentificate and grant permission to send a message</source>
+      <translation>Authentificate และให้สิทธิ์ในการส่งข้อความ</translation>
+    </message>
+    <message>
+      <source>Grant permission to send a message</source>
+      <translation>การส่งข้อความ</translation>
+    </message>
+    <message>
+      <source>Succesfully authorised, now you can try to send a message</source>
+      <translation>Authorised ตอนนี้คุณสามารถพยายามส่งข้อความเสร็จเรียบร้อย</translation>
+    </message>
+    <message>
+      <source>Token was revoked</source>
+      <translation>โทเค็นถูกเพิกถอน</translation>
+    </message>
+    <message>
+      <source>XMPP message was sent succesfuly</source>
+      <translation>ข้อ XMPP ส่งเอ</translation>
     </message>
   </context>
   <context>
@@ -1710,6 +2413,10 @@
       <translation>โหลน</translation>
     </message>
     <message>
+      <source>Time zone</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Identifier</source>
       <translation>รหัส</translation>
     </message>
@@ -1814,6 +2521,14 @@
       <translation>การกำหนดค่าแชท</translation>
     </message>
     <message>
+      <source>Enable/Disable sound about new visitor</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Enable/Disable browser notifications about new visitor</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>List</source>
       <translation>รายการ</translation>
     </message>
@@ -1884,6 +2599,14 @@
     <message>
       <source>days</source>
       <translation>วัน</translation>
+    </message>
+    <message>
+      <source>Max records to return</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Visitor local time</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Status</source>
@@ -2041,6 +2764,14 @@
       <translation>เบ็ดเตล็ด</translation>
     </message>
     <message>
+      <source>Cookie related</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chat related</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Workflow</source>
       <translation>ลำดับงาน</translation>
     </message>
@@ -2072,68 +2803,8 @@
       <translation>การกำหนดค่าระบบ</translation>
     </message>
     <message>
-      <source>Chat related</source>
-      <translation>สนทนาที่เกี่ยวข้อง</translation>
-    </message>
-    <message>
-      <source>Departments</source>
-      <translation>แผนก</translation>
-    </message>
-    <message>
-      <source>Blocked users</source>
-      <translation>ผู้ใช้ที่ถูกบล็อค</translation>
-    </message>
-    <message>
-      <source>Chat configuration</source>
-      <translation>การกำหนดค่าแชท</translation>
-    </message>
-    <message>
-      <source>GEO detection configuration</source>
-      <translation>กำหนดค่าตรวจสอบ GEO</translation>
-    </message>
-    <message>
-      <source>Synchronization and sound settings</source>
-      <translation>การตั้งค่าการซิงโครไนส์และเสียง</translation>
-    </message>
-    <message>
-      <source>Start chat form settings</source>
-      <translation>เริ่มต้นการตั้งค่าแบบฟอร์มสนทนา</translation>
-    </message>
-    <message>
-      <source>Canned messages</source>
-      <translation>ข้อความที่บรรจุกระป๋อง</translation>
-    </message>
-    <message>
-      <source>E-mail templates</source>
-      <translation>แม่แบบอีเมล</translation>
-    </message>
-    <message>
-      <source>Pro active chat invitations</source>
-      <translation>เชิญสนทนาใช้งาน pro</translation>
-    </message>
-    <message>
-      <source>Auto responder</source>
-      <translation>ผู้ตอบสนองโดยอัตโนมัติ</translation>
-    </message>
-    <message>
-      <source>SMTP settings</source>
-      <translation>การตั้งค่า SMTP</translation>
-    </message>
-    <message>
-      <source>XMPP settings</source>
-      <translation>การตั้งค่า XMPP</translation>
-    </message>
-    <message>
-      <source>Languages configuration</source>
-      <translation>กำหนดค่าภาษา</translation>
-    </message>
-    <message>
-      <source>Chats list</source>
-      <translation>รายการสนทนา</translation>
-    </message>
-    <message>
-      <source>Chat archive</source>
-      <translation>ฉัตรถาวร</translation>
+      <source>System</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Time zone settings</source>
@@ -2141,6 +2812,34 @@
     </message>
     <message>
       <source>Update information</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>SMTP settings</source>
+      <translation>การตั้งค่า SMTP</translation>
+    </message>
+    <message>
+      <source>E-mail templates</source>
+      <translation>แม่แบบอีเมล</translation>
+    </message>
+    <message>
+      <source>Languages configuration</source>
+      <translation>กำหนดค่าภาษา</translation>
+    </message>
+    <message>
+      <source>Users</source>
+      <translation>ผู้ใช้</translation>
+    </message>
+    <message>
+      <source>List of groups</source>
+      <translation>รายการของกลุ่ม</translation>
+    </message>
+    <message>
+      <source>List of roles</source>
+      <translation>รายการของบทบาท</translation>
+    </message>
+    <message>
+      <source>Embed code</source>
       <translation type="unfinished"/>
     </message>
     <message>
@@ -2164,32 +2863,72 @@
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Form module</source>
+      <source>Live help configuration</source>
       <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Departments</source>
+      <translation>แผนก</translation>
+    </message>
+    <message>
+      <source>Blocked users</source>
+      <translation>ผู้ใช้ที่ถูกบล็อค</translation>
+    </message>
+    <message>
+      <source>Chat configuration</source>
+      <translation>การกำหนดค่าแชท</translation>
+    </message>
+    <message>
+      <source>GEO detection configuration</source>
+      <translation>กำหนดค่าตรวจสอบ GEO</translation>
+    </message>
+    <message>
+      <source>GEO adjustment</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Synchronization and sound settings</source>
+      <translation>การตั้งค่าการซิงโครไนส์และเสียง</translation>
+    </message>
+    <message>
+      <source>Start chat form settings</source>
+      <translation>เริ่มต้นการตั้งค่าแบบฟอร์มสนทนา</translation>
+    </message>
+    <message>
+      <source>Canned messages</source>
+      <translation>ข้อความที่บรรจุกระป๋อง</translation>
+    </message>
+    <message>
+      <source>Pro active chat invitations</source>
+      <translation>เชิญสนทนาใช้งาน pro</translation>
+    </message>
+    <message>
+      <source>Auto responder</source>
+      <translation>ผู้ตอบสนองโดยอัตโนมัติ</translation>
+    </message>
+    <message>
+      <source>XMPP settings</source>
+      <translation>การตั้งค่า XMPP</translation>
+    </message>
+    <message>
+      <source>Chats list</source>
+      <translation>รายการสนทนา</translation>
+    </message>
+    <message>
+      <source>Chat archive</source>
+      <translation>ฉัตรถาวร</translation>
     </message>
     <message>
       <source>Statistic</source>
       <translation>สถิติ</translation>
     </message>
     <message>
-      <source>Users and their permissions</source>
-      <translation>ผู้ใช้และสิทธิ์ของพวกเขา</translation>
+      <source>Maintenance</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>Users</source>
-      <translation>ผู้ใช้</translation>
-    </message>
-    <message>
-      <source>List of groups</source>
-      <translation>รายการของกลุ่ม</translation>
-    </message>
-    <message>
-      <source>List of roles</source>
-      <translation>รายการของบทบาท</translation>
-    </message>
-    <message>
-      <source>Files uploads configuration</source>
-      <translation>กำหนดค่าการอัปโหลดแฟ้ม</translation>
+      <source>Files</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Files upload configuration</source>
@@ -2200,8 +2939,20 @@
       <translation>รายการของแฟ้ม</translation>
     </message>
     <message>
-      <source>Other</source>
-      <translation>อื่น ๆ</translation>
+      <source>Theming</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget themes</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Import new themes</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Default theme</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>File configuration</source>
@@ -2248,6 +2999,10 @@
     <message>
       <source>Empty...</source>
       <translation>ว่างเปล่า...</translation>
+    </message>
+    <message>
+      <source>Assigned operator</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Clean cache</source>
@@ -2306,6 +3061,10 @@
       <translation>ผู้เยี่ยมชมออนไลน์</translation>
     </message>
     <message>
+      <source>Extra modules</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Questionary</source>
       <translation>Questionary</translation>
     </message>
@@ -2338,45 +3097,33 @@
     </message>
   </context>
   <context>
-    <name>chat/lists/search_panel</name>
+    <name>chat/maintenance</name>
     <message>
-      <source>Nick</source>
-      <translation>นิค</translation>
-    </message>
-    <message>
-      <source>E-mail</source>
-      <translation>อีเมล</translation>
-    </message>
-    <message>
-      <source>Date range from to</source>
-      <translation>ช่วงวันที่จากไป</translation>
-    </message>
-    <message>
-      <source>Department</source>
-      <translation>แผนก</translation>
-    </message>
-    <message>
-      <source>User</source>
-      <translation>ผู้ใช้งาน</translation>
-    </message>
-    <message>
-      <source>Search</source>
-      <translation>ค้นหา</translation>
-    </message>
-    <message>
-      <source>Print</source>
+      <source>Maintenance</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Select department</source>
-      <translation>เลือก แผนก</translation>
+      <source>Automatic chats close, click to close old chats</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>Select user</source>
-      <translation>เลือก ผู้ใช้งาน</translation>
+      <source>Automatic chats purge, click to purge old chats</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>Type to search</source>
+      <source>Update chats duration by using new algorithm</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Closed chats</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Purged chats</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chats duration was updated</source>
       <translation type="unfinished"/>
     </message>
   </context>
@@ -2766,6 +3513,114 @@
       <translation>สถิติ</translation>
     </message>
     <message>
+      <source>User</source>
+      <translation>ผู้ใช้</translation>
+    </message>
+    <message>
+      <source>Thumbs up</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of Thumbs Up</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Thumbs down</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of Thumbs Down</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Country</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chats</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of chats by country</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Messages</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of messages by user</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Month</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Closed</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Active</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Operators</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Pending</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chats number by statuses</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Visitors initiated</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Proactive</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Proactive chats number vs visitors initiated</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Visitors</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>System</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Messages types</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of chats per hour, average chat duration</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chats statistic</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Hourly statistic</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Country statistic</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Users statisic</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Total statistic</source>
       <translation>สถิติทั้งหมด</translation>
     </message>
@@ -2820,10 +3675,6 @@
     <message>
       <source>Operators last 24h statistic, top 100 by chats number</source>
       <translation>ตัวสุดท้าย 24 ชมสถิติ 100 บนตามอีกเลย</translation>
-    </message>
-    <message>
-      <source>User</source>
-      <translation>ผู้ใช้</translation>
     </message>
     <message>
       <source>Total messages</source>
@@ -3260,6 +4111,10 @@
       <translation>การปรับปรุง</translation>
     </message>
     <message>
+      <source>Updating...</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Logged user</source>
       <translation>ผู้ใช้ที่ล็อกไว้</translation>
     </message>
@@ -3368,12 +4223,24 @@
       <translation type="unfinished"/>
     </message>
     <message>
+      <source>Pending chats</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>I can see all pending chats, not only assigned to me</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Account updated</source>
       <translation>ปรับปรุงบัญชี</translation>
     </message>
     <message>
       <source>Delete</source>
       <translation>ลบ</translation>
+    </message>
+    <message>
+      <source>User can see all pending chats, not only assigned to him</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Please enter a username!</source>
@@ -3394,6 +4261,21 @@
     <message>
       <source>Passwords mismatch</source>
       <translation>รหัสผ่านไม่ตรงกัน</translation>
+    </message>
+  </context>
+  <context>
+    <name>chat/operatorsbalancing</name>
+    <message>
+      <source>Active</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Maximum number of active chats user can have at a time, 0 - unlimited</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Automatically assign chat to another operator if operator did not accepted chat in seconds, 0 - disabled</source>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -3657,6 +4539,102 @@
     </message>
   </context>
   <context>
+    <name>form/collected</name>
+    <message>
+      <source>Download XLS</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>URL</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Intro</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Time</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>IP</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>View</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>form/fill</name>
+    <message>
+      <source>Return</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Submit</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Information collected</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>is required</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>invalid date format</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>form/index</name>
+    <message>
+      <source>Form</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>List of forms</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Page embed code</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Date</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>form/viewcollected</name>
+    <message>
+      <source>collected information</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Collected information</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
     <name>kernel/nopermission</name>
     <message>
       <source>Go back</source>
@@ -3802,10 +4780,6 @@
       <translation>นโยบายใหม่</translation>
     </message>
     <message>
-      <source>Assigned functions</source>
-      <translation>กำหนดฟังก์ชัน</translation>
-    </message>
-    <message>
       <source>Choose a module</source>
       <translation>เลือกโมดูล</translation>
     </message>
@@ -3818,16 +4792,16 @@
       <translation>เลือกฟังก์ชันโมดูล</translation>
     </message>
     <message>
-      <source>All functions</source>
-      <translation>ฟังก์ชั่นทั้งหมด</translation>
-    </message>
-    <message>
       <source>Save</source>
       <translation>บันทึก</translation>
     </message>
     <message>
       <source>Cancel</source>
       <translation>ยกเลิก</translation>
+    </message>
+    <message>
+      <source>All functions</source>
+      <translation>ฟังก์ชั่นทั้งหมด</translation>
     </message>
   </context>
   <context>
@@ -4301,6 +5275,10 @@
       <translation type="unfinished"/>
     </message>
     <message>
+      <source>Comparing current database structure, please wait...</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Time zone</source>
       <translation type="unfinished"/>
     </message>
@@ -4407,19 +5385,15 @@
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Last database update</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
       <source>News</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Missing updates from new versions.</source>
+      <source>Update instructions</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Update instructions</source>
+      <source>Missing updates from new versions.</source>
       <translation type="unfinished"/>
     </message>
     <message>
@@ -4428,6 +5402,90 @@
     </message>
     <message>
       <source>Live Helper Chat update information</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>update/statusdb</name>
+    <message>
+      <source>Database structure check</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Your database does not require any updates</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Update database</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Queries which will be executed on update</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>theme/index</name>
+    <message>
+      <source>Default theme</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Theme</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Widget themes</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Import a new theme</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Themes</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Import theme</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>theme/default</name>
+    <message>
+      <source>Set as default theme</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>theme/import</name>
+    <message>
+      <source>Default theme was set</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Import theme</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>File</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Import</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Theme imported</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Could not import a new theme!</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Invalid file!</source>
       <translation type="unfinished"/>
     </message>
   </context>
@@ -4486,12 +5544,12 @@
       <translation>ภาพถ่าย</translation>
     </message>
     <message>
-      <source>Departments</source>
-      <translation>แผนก</translation>
-    </message>
-    <message>
       <source>Save</source>
       <translation>บันทึก</translation>
+    </message>
+    <message>
+      <source>Departments</source>
+      <translation>แผนก</translation>
     </message>
     <message>
       <source>Please choose a default user group</source>
@@ -4805,149 +5863,6 @@
     </message>
   </context>
   <context>
-    <name>system/xmpp</name>
-    <message>
-      <source>XMPP settings</source>
-      <translation>การตั้งค่า XMPP</translation>
-    </message>
-    <message>
-      <source>XMPP active</source>
-      <translation>XMPP ใช้งานอยู่</translation>
-    </message>
-    <message>
-      <source>XMPP Message content</source>
-      <translation>เนื้อหาข้อความ XMPP</translation>
-    </message>
-    <message>
-      <source>XMPP</source>
-      <translation>XMPP</translation>
-    </message>
-    <message>
-      <source>Use standard XMPP service</source>
-      <translation>ใช้บริการ XMPP มาตรฐาน</translation>
-    </message>
-    <message>
-      <source>Host</source>
-      <translation>โฮสต์</translation>
-    </message>
-    <message>
-      <source>Port</source>
-      <translation>พอร์ต</translation>
-    </message>
-    <message>
-      <source>Login</source>
-      <translation>เข้าสู่ระบบ</translation>
-    </message>
-    <message>
-      <source>Password</source>
-      <translation>รหัสผ่าน</translation>
-    </message>
-    <message>
-      <source>Resource</source>
-      <translation>ทรัพยากร</translation>
-    </message>
-    <message>
-      <source>Server</source>
-      <translation>เซิร์ฟเวอร์</translation>
-    </message>
-    <message>
-      <source>Recipients</source>
-      <translation>ผู้รับ</translation>
-    </message>
-    <message>
-      <source>Default recipients</source>
-      <translation>ผู้รับค่าเริ่มต้น</translation>
-    </message>
-    <message>
-      <source>Test recipients</source>
-      <translation>ผู้รับการทดสอบ</translation>
-    </message>
-    <message>
-      <source>Individual recipients</source>
-      <translation>ผู้รับแต่ละ</translation>
-    </message>
-    <message>
-      <source>Test group recipients</source>
-      <translation>ทดสอบกลุ่มผู้รับ</translation>
-    </message>
-    <message>
-      <source>Test message will be send to your account e-mail</source>
-      <translation>ทดสอบข้อความจะถูกส่งอีเมลบัญชีของคุณ</translation>
-    </message>
-    <message>
-      <source>GTalk</source>
-      <translation>GTalk</translation>
-    </message>
-    <message>
-      <source>Use GTalk for messaging</source>
-      <translation>ใช้ GTalk สำหรับข้อความ</translation>
-    </message>
-    <message>
-      <source>Information for your google app</source>
-      <translation>ข้อมูลของคุณ google app</translation>
-    </message>
-    <message>
-      <source>Redirect URL, this url you will have to enter in your google app configuration</source>
-      <translation>เปลี่ยนเส้นทาง URL, url นี้คุณจะต้องป้อนในการกำหนดค่าของคุณ google app</translation>
-    </message>
-    <message>
-      <source>Enter your app information bellow</source>
-      <translation>ใส่ซอลเบลโลว์ข้อมูลโปรแกรมประยุกต์ของคุณ</translation>
-    </message>
-    <message>
-      <source>OAuth 2.0 Client ID</source>
-      <translation>รหัสไคลเอนต์ OAuth 2.0</translation>
-    </message>
-    <message>
-      <source>Please enter your Client ID</source>
-      <translation>โปรดป้อนหมายเลขของไคลเอนต์</translation>
-    </message>
-    <message>
-      <source>Client secret</source>
-      <translation>ความลับของลูกค้า</translation>
-    </message>
-    <message>
-      <source>This message will be send to your e-mail</source>
-      <translation>ข้อความนี้จะถูกส่งไปยังอีเมลของคุณ</translation>
-    </message>
-    <message>
-      <source>Send test message</source>
-      <translation>ส่งข้อความทดสอบ</translation>
-    </message>
-    <message>
-      <source>Revoke access token</source>
-      <translation>ยกเลิกการโทเค็นการเข้าถึง</translation>
-    </message>
-    <message>
-      <source>Revoke permission to send a message</source>
-      <translation>ยกเลิกสิทธิ์ในการส่งข้อความ</translation>
-    </message>
-    <message>
-      <source>Authentificate and grant permission to send a message</source>
-      <translation>Authentificate และให้สิทธิ์ในการส่งข้อความ</translation>
-    </message>
-    <message>
-      <source>Grant permission to send a message</source>
-      <translation>การส่งข้อความ</translation>
-    </message>
-    <message>
-      <source>Settings updated</source>
-      <translation>การตั้งค่าการปรับปรุง</translation>
-    </message>
-    <message>
-      <source>Succesfully authorised, now you can try to send a message</source>
-      <translation>Authorised ตอนนี้คุณสามารถพยายามส่งข้อความเสร็จเรียบร้อย</translation>
-    </message>
-    <message>
-      <source>Token was revoked</source>
-      <translation>โทเค็นถูกเพิกถอน</translation>
-    </message>
-    <message>
-      <source>XMPP message was sent succesfuly</source>
-      <translation>ข้อ XMPP ส่งเอ</translation>
-    </message>
-  </context>
-  <context>
     <name>file/file</name>
     <message>
       <source>Download file</source>
@@ -4963,6 +5878,10 @@
     <message>
       <source>from</source>
       <translation>จาก</translation>
+    </message>
+    <message>
+      <source>Chat was automatically closed by cron</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>Support staff member has closed this chat</source>
@@ -5048,6 +5967,10 @@
     </message>
     <message>
       <source>Default popup content</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Callback content, must be valid json</source>
       <translation type="unfinished"/>
     </message>
     <message>
@@ -5213,6 +6136,13 @@
     </message>
   </context>
   <context>
+    <name>chat/updatemsguser</name>
+    <message>
+      <source>User has edited his last message</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
     <name>chat/voteaction</name>
     <message>
       <source>Thumbs up</source>
@@ -5239,102 +6169,6 @@
     <message>
       <source>Please enter valid file type!</source>
       <translation>กรุณาระบุชนิดแฟ้มที่ถูกต้อง</translation>
-    </message>
-  </context>
-  <context>
-    <name>form/collected</name>
-    <message>
-      <source>Download XLS</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>URL</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Name</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Intro</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Time</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>IP</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>View</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Download</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Delete</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
-    <name>form/fill</name>
-    <message>
-      <source>Return</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Submit</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Information collected</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>is required</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>invalid date format</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
-    <name>form/index</name>
-    <message>
-      <source>Form</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>List of forms</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Page embed code</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Date</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
-    <name>form/viewcollected</name>
-    <message>
-      <source>collected information</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Download</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Collected information</source>
-      <translation type="unfinished"/>
     </message>
   </context>
 </TS>

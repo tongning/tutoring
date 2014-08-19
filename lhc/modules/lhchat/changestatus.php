@@ -35,8 +35,7 @@ if ( erLhcoreClassChat::hasAccessToRead($chat) ) {
 		 		$chat->updateThis();
 		 		
 		 	 } elseif ($changeStatus == erLhcoreClassModelChat::STATUS_PENDING_CHAT) {	
-		 	 	
-		 	 	$chat->user_id = 0;
+		 	 			 	 	
 		 	 	$chat->status = erLhcoreClassModelChat::STATUS_PENDING_CHAT;		 	 	
 		 	 	$chat->support_informed = 0;
 		 	 	$chat->has_unread_messages = 1;	
@@ -47,7 +46,7 @@ if ( erLhcoreClassChat::hasAccessToRead($chat) ) {
 		 	 	
 		 	 	if ($chat->status != erLhcoreClassModelChat::STATUS_CLOSED_CHAT){		 	 	
 		 	 		$chat->status = erLhcoreClassModelChat::STATUS_CLOSED_CHAT;
-		 	 		$chat->chat_duration = time() - ($chat->time + $chat->wait_time);
+		 	 		$chat->chat_duration = erLhcoreClassChat::getChatDurationToUpdateChatID($chat->id);
 		 	 			 	 				 	 	
 		 	 		$msg = new erLhcoreClassModelmsg();
 		 	 		$msg->msg = (string)$userData.' '.erTranslationClassLhTranslation::getInstance()->getTranslation('chat/closechatadmin','has closed the chat!');
@@ -74,6 +73,8 @@ if ( erLhcoreClassChat::hasAccessToRead($chat) ) {
 		 	 	erLhcoreClassChat::getSession()->update($chat);
 		 	 }		 	 	
 		 	
+		 	 erLhcoreClassChat::updateActiveChats($chat->user_id);
+		 	 
 			 echo json_encode(array('error' => 'false'));
 			 exit;
 		 } else {

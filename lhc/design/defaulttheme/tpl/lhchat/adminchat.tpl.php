@@ -27,8 +27,12 @@
 		<textarea rows="4" <?php if ($chat->status == erLhcoreClassModelChat::STATUS_CLOSED_CHAT) : ?>readonly="readonly"<?php endif;?> name="ChatMessage" id="CSChatMessage-<?php echo $chat->id?>"></textarea>
 
 		<script type="text/javascript">
-		jQuery('#CSChatMessage-<?php echo $chat->id?>').bind('keyup', 'return', function (evt){
+		jQuery('#CSChatMessage-<?php echo $chat->id?>').bind('keydown', 'return', function (evt){
 		    lhinst.addmsgadmin('<?php echo $chat->id?>');
+		    return false;
+		});
+		jQuery('#CSChatMessage-<?php echo $chat->id?>').bind('keyup', 'up', function (evt){
+			lhinst.editPrevious('<?php echo $chat->id?>');		   
 		});
 		lhinst.initTypingMonitoringAdmin('<?php echo $chat->id?>');
 		</script>

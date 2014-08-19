@@ -80,7 +80,8 @@ $ViewList['setsetting'] = array (
 );
 
 $ViewList['setsettingajax'] = array (
-		'params' => array('identifier','value')
+		'params' => array('identifier','value'),
+		'uparams' => array('indifferent')
 );
 
 $ViewList['setoffline'] = array (
@@ -112,5 +113,6 @@ $FunctionList['personalcannedmsg'] = array('explain' => 'Allow user to have pers
 $FunctionList['changevisibility'] = array('explain' => 'Allow user to change his visibility mode');
 $FunctionList['change_visibility_list'] = array('explain' => 'Allow user to choose what list should be visible by him, pending/active/unread/closed');
 $FunctionList['see_assigned_departments'] = array('explain' => 'Allow user to see departments assigned to him');
+$FunctionList['allowtochoosependingmode'] = array('explain' => 'Allow user to choose what pending chats he can see, only assigned to him or all.');
 
 ?>

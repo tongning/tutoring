@@ -61,6 +61,9 @@
 		    		
 		    <?php $attribute = 'track_online_visitors';$boolValue = true;?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>		
+		    		
+		    <?php $attribute = 'track_if_offline';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>		
 		    				    				    		
 		    <?php $attribute = 'need_help_tip';$boolValue = true;?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>		
@@ -88,13 +91,16 @@
 		    			    		
 		    <?php $attribute = 'pro_active_limitation'?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    			    		
+		    
 		</div>
 	</section>
 	
   <section>
 	    <p class="title" data-section-title><a href="#misc"><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/listchatconfig','Misc');?></a></p>
 	    <div class="content" data-section-content data-slug="misc">			    		    			    		
-		    		    		    
+		    
+		    <h4><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/listchatconfig','Cookie related');?></h4>		    		    
 		    <?php $attribute = 'track_domain'?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    		    		    
@@ -103,10 +109,14 @@
 		    		    		    
 		    <?php $attribute = 'use_secure_cookie';$boolValue = true;?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    		    		    
+		    <?php $attribute = 'disable_html5_storage';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    
 		    <?php $attribute = 'session_captcha';$boolValue = true;?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    
+		    <h4><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/listchatconfig','Chat related');?></h4>
 		    <?php $attribute = 'list_online_operators';$boolValue = true;?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    
@@ -118,24 +128,27 @@
 		    		    
 		    <?php $attribute = 'reopen_chat_enabled';$boolValue = true;?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    		    
+		    <?php $attribute = 'automatically_reopen_chat';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    		    
+		    <?php $attribute = 'allow_reopen_closed';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    		    
+		    <?php $attribute = 'reopen_as_new';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    		    
+		    <?php $attribute = 'min_phone_length';?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    
 		    <?php $attribute = 'export_hash'?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    
+		    <?php $attribute = 'update_ip'?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    
 		    <?php $attribute = 'accept_chat_link_timeout'?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>	
-		     
-		    <?php $attribute = 'voting_days_limit'?>
-		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
-		     
-		    <?php $attribute = 'hide_disabled_department';$boolValue = true;?>
-		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
-		     
-		    <?php $attribute = 'ignore_user_status';$boolValue = true;?>
-		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
-		     
-		    <?php $attribute = 'faq_email_required';$boolValue = true;?>
-		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    
 		    <?php $attribute = 'disable_print';$boolValue = true;?>
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
@@ -144,7 +157,44 @@
 		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    
 		    <?php $attribute = 'max_message_length'?>
-		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>    		    
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?> 
+		    
+		    <?php $attribute = 'mheight'?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?> 
+		    
+		    <?php $attribute = 'hide_disabled_department';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    
+		    <?php $attribute = 'suggest_leave_msg';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    
+		    <h4><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/listchatconfig','Misc');?></h4>
+		    <?php $attribute = 'voting_days_limit'?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		     
+		    <?php $attribute = 'ignore_user_status';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		     
+		    <?php $attribute = 'faq_email_required';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    <hr>	
+		    <?php $attribute = 'show_language_switcher';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		     
+		    <?php $attribute = 'show_languages';?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+			<hr>	    
+		    <?php $attribute = 'track_is_online';$boolValue = true;?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    		    
+		    <?php $attribute = 'checkstatus_timeout'?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    <hr>		    
+		    <?php $attribute = 'autoclose_timeout'?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
+		    
+		    <?php $attribute = 'autopurge_timeout'?>
+		    <?php include(erLhcoreClassDesign::designtpl('lhchat/part/chat_settings.tpl.php'));?>
 		    	    
 		</div>
 	</section>

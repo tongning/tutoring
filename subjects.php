@@ -18,11 +18,11 @@ if($_SESSION['logged_in']==1){
 		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
 		<style type="text/css">
 		.main-form a {
-			color:#FFF;
+			color:#333;
 			
 		}
 		.main-form {
-			height:300px;
+			height:350px;
 		}
 		</style>
 	</head>
@@ -75,6 +75,7 @@ if($_SESSION['logged_in']==1){
 				<h1><a href="worldhist.php">World History</a></h1><br>
 				<h1><a href="nsl.php">US Government</a></h1><br>
 				<h1><a href="ushist.php">US History</a></h1><br>
+<h1><a href="math.php">Math</a></h1><br>
 			</div> <!--close main div-->
         </div>
     </body>

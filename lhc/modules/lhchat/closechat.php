@@ -15,10 +15,10 @@ if ($chat->user_id == $currentUser->getUserID() || $currentUser->hasAccessTo('lh
 		exit;
 	}
 
-	if ($chat->status != erLhcoreClassModelChat::STATUS_CLOSED_CHAT){
+	if ($chat->status != erLhcoreClassModelChat::STATUS_CLOSED_CHAT) {
 
 	    $chat->status = erLhcoreClassModelChat::STATUS_CLOSED_CHAT;
-	    $chat->chat_duration = time() - ($chat->time + $chat->wait_time);
+	    $chat->chat_duration = erLhcoreClassChat::getChatDurationToUpdateChatID($chat->id);
 
 	    $userData = $currentUser->getUserData(true);
 
@@ -32,13 +32,15 @@ if ($chat->user_id == $currentUser->getUserID() || $currentUser->hasAccessTo('lh
 	    erLhcoreClassChat::getSession()->save($msg);
 
 	    $chat->updateThis();
-
-	    CSCacheAPC::getMem()->removeFromArray('lhc_open_chats', $chat->id);
-
+	    
+	    erLhcoreClassChat::updateActiveChats($chat->user_id);
+	    
 	    // Execute callback for close chat
 	    erLhcoreClassChat::closeChatCallback($chat,$userData);
 	}
 }
+
+CSCacheAPC::getMem()->removeFromArray('lhc_open_chats', (int)$Params['user_parameters']['chat_id']);
 
 header('Location: ' . $_SERVER['HTTP_REFERER']);
 exit;

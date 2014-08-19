@@ -12,6 +12,23 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script src="js/modernizr.custom.63321.js"></script>
 <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+<style type="text/css">
+.main-form {
+/*background*/
+position:relative;
+border-radius: 25px;
+left:30%;
+
+width:500px;
+	background-color:rgba(100,100,100,0.5);
+	height:200px;
+	
+
+	padding-right: 50px;
+	padding-left: 100px;
+}
+</style>
+
 </head>
 <body>
 <div class="container"> 
@@ -37,7 +54,7 @@
   <header>
     <div class="intro">
       <h1>Need <strong>study help?</strong></h1>
-      <h2>Enter your student ID and password below to start chatting with Blair's student tutors!</h2>
+      <h2>Enter your student ID and password below to speak with Blair's student tutors!</h2>
     </div>
     <nav class="codrops-demos"> 
       <!--
@@ -55,6 +72,7 @@
                   if($errcode==1){
                       ?>
   <style type="text/css">
+
                       alert {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 13px;

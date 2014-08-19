@@ -1,5 +1,200 @@
 <?xml version="1.0" ?><!DOCTYPE TS><TS language="zh">
   <context>
+    <name>listchatconfig</name>
+    <message>
+      <source>How many days voting widget should not be expanded after last show</source>
+      <translation>多少天投票窗口小部件不应扩大后最后的展示</translation>
+    </message>
+    <message>
+      <source>Use secure cookie, check this if you want to force SSL all the time</source>
+      <translation>使用安全Cookie，检查如果你想使用SSL所有时间</translation>
+    </message>
+    <message>
+      <source>Which ip should be allowed to update DB by executing http request, separate by comma?</source>
+      <translation>允许通过执行HTTP请求更新数据库的IP，用逗号分隔.</translation>
+    </message>
+    <message>
+      <source>Enable online site visitors tracking</source>
+      <translation>启用网站访问者跟踪</translation>
+    </message>
+    <message>
+      <source>Track online visitors even if there is no online operators</source>
+      <translation>跟踪在线访客即使如果没有客服在线的情况下</translation>
+    </message>
+    <message>
+      <source>Track users footprint. For this also online visitors tracking should be enabled</source>
+      <translation>跟踪用户的足迹。要求启用在线访客追踪</translation>
+    </message>
+    <message>
+      <source>Set your domain to enable user tracking across different domain subdomains.</source>
+      <translation>设置您的域名以启用跟踪用户在不同的域名的子域名</translation>
+    </message>
+    <message>
+      <source>How many days keep records of online users.</source>
+      <translation>保持在线用户记录的天数</translation>
+    </message>
+    <message>
+      <source>Suggest user to leave a message then user chooses offline department</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Play sound on invitation to chat.</source>
+      <translation>播放声音以邀请访客聊天</translation>
+    </message>
+    <message>
+      <source>Show users option to switch language at widget</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Between what languages user should be able to switch</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Use session captcha. LHC have to be installed on the same domain or subdomain.</source>
+      <translation>使用会话验证码。LHC必须安装在同一个域名或子域名</translation>
+    </message>
+    <message>
+      <source>Should cronjob run unanswered chats workflow and execute unaswered chats callback, 0 - no, any other number bigger than 0 is a minits how long chat have to be not accepted before executing callback.</source>
+      <translation>运行无回应工作流计划并执行无回应回访，0 - 否，任何大于0分钟是指多长时间聊天未被接受就执行回访。</translation>
+    </message>
+    <message>
+      <source>Should cronjob run departments transfer workflow, even if user leaves a chat</source>
+      <translation>运行客服部门迁移工作流计划，即使用户离开聊天</translation>
+    </message>
+    <message>
+      <source>Reopen chat functionality enabled</source>
+      <translation>启用重新打开聊天功能</translation>
+    </message>
+    <message>
+      <source>Reopen closed chat as new? Otherwise it will be reopened as active.</source>
+      <translation>重新打开关闭的聊天作为新对话？否则会重新激活关闭的对话。</translation>
+    </message>
+    <message>
+      <source>Should invitation logic be executed if there is no online operators</source>
+      <translation>如果没有在线客服将执行邀请脚本</translation>
+    </message>
+    <message>
+      <source>Pro active chats invitations limitation based on pending chats, (-1) do not limit, (0,1,n+1) number of pending chats can be for invitation to be shown.</source>
+      <translation>主动聊天邀请限制基于待定的聊天记录，1不限，(0、1、n+1)数量的待聊天可以邀请被显示。</translation>
+    </message>
+    <message>
+      <source>Is pro active chat invitation active. Online users tracking also has to be enabled</source>
+      <translation>激话聊天邀请。在线用户跟踪也必须被启用</translation>
+    </message>
+    <message>
+      <source>Need help tooltip timeout, after how many hours show again tooltip?</source>
+      <translation>需要帮助的工具提示超时后多少小时再次显示？</translation>
+    </message>
+    <message>
+      <source>Show need help tooltip?</source>
+      <translation>显示需要帮助工具提示吗？</translation>
+    </message>
+    <message>
+      <source>Minimum phone number length</source>
+      <translation>电话号码最小长度</translation>
+    </message>
+    <message>
+      <source>Messages box height</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Proactive message timeout in hours. After how many hours proactive chat mesasge should be shown again.</source>
+      <translation>在多少小时内主动消息超时。多少小时后主动聊天应该再次显示</translation>
+    </message>
+    <message>
+      <source>Maximum message length in characters</source>
+      <translation>最大消息长度，以字符计数，一个汉字占2字节</translation>
+    </message>
+    <message>
+      <source>List online operators.</source>
+      <translation>列出在线客服</translation>
+    </message>
+    <message>
+      <source>Ignore users online statuses and use departments online hours</source>
+      <translation>忽略用户在线状态，并使用客服部门在线时间 </translation>
+    </message>
+    <message>
+      <source>Which ip should be ignored in online users list, separate by comma</source>
+      <translation>需要在在线用户列表中忽略的IP地址，用逗号分开</translation>
+    </message>
+    <message>
+      <source>Hide disabled department widget</source>
+      <translation>隐藏禁用部门控件</translation>
+    </message>
+    <message>
+      <source>Is visitor e-mail required for FAQ</source>
+      <translation>FAQ请求需要访客提供电子邮箱</translation>
+    </message>
+    <message>
+      <source>Chats export secret hash</source>
+      <translation>聊天记录导出加密hash</translation>
+    </message>
+    <message>
+      <source>Please enter explicit http mode. Either http: or https:, do not forget : at the end.</source>
+      <translation>请明确输入 http 模式。任一 http： 或 https：，不要忘记在结尾输入&quot; : &quot; </translation>
+    </message>
+    <message>
+      <source>Disable chat transcript send</source>
+      <translation>禁用聊天内容发送功能</translation>
+    </message>
+    <message>
+      <source>Disable chat print</source>
+      <translation>禁用聊天内容打印功能</translation>
+    </message>
+    <message>
+      <source>Disable option in widget to open new window. Restore icon will be hidden</source>
+      <translation>禁用选项可以在新窗口中打开。恢复图标将会隐藏</translation>
+    </message>
+    <message>
+      <source>Disable HMTL5 storage, check it if your site is switching between http and https</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Your site URL address</source>
+      <translation>你的站点的 URL 地址</translation>
+    </message>
+    <message>
+      <source>Your company name - visible in bottom left corner</source>
+      <translation>您的公司名称-在左下角可见</translation>
+    </message>
+    <message>
+      <source>Interval between chat status checks in seconds, 0 disabled.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Show BB Code button</source>
+      <translation>显示 BB 代码按钮</translation>
+    </message>
+    <message>
+      <source>Automatic chats purging. 0 - disabled, n &gt; 0 time in minutes before chat is automatically deleted</source>
+      <translation>自动清除聊天记录。0-禁用，n &gt; 0 分钟前自动删除</translation>
+    </message>
+    <message>
+      <source>Automatically reopen chat on widget open</source>
+      <translation>当部件打开自动重新打开聊天窗口</translation>
+    </message>
+    <message>
+      <source>Automatic chats closing. 0 - disabled, n &gt; 0 time in minutes before chat is automatically closed</source>
+      <translation>关闭自动聊天。0 - 关闭，n &gt; 0 分钟后聊天自动关闭</translation>
+    </message>
+    <message>
+      <source>Support application name, visible in browser title.</source>
+      <translation>支持应用程序的名称，在浏览器标题可见。</translation>
+    </message>
+    <message>
+      <source>Allow user to reopen closed chats?</source>
+      <translation>允许用户重新打开关闭的聊天？</translation>
+    </message>
+    <message>
+      <source>Change to your site Terms of Service</source>
+      <translation>改变你的网站的服务条款</translation>
+    </message>
+    <message>
+      <source>How many seconds chat accept link is valid. Set 0 to force login all the time manually.</source>
+      <translation>多少秒聊天接受链接是有效的。设置0 为强制所有时间为手动登录。</translation>
+    </message>
+  </context>
+  <context>
     <name>system/buttons</name>
     <message>
       <source>Save</source>
@@ -74,6 +269,176 @@
     </message>
   </context>
   <context>
+    <name>abstract/widgettheme</name>
+    <message>
+      <source>Download theme</source>
+      <translation>下载主题</translation>
+    </message>
+    <message>
+      <source>Status widget style</source>
+      <translation>状态窗口风格</translation>
+    </message>
+    <message>
+      <source>Widget copyright</source>
+      <translation>版权的小部件</translation>
+    </message>
+    <message>
+      <source>Widget container</source>
+      <translation>部件容器</translation>
+    </message>
+    <message>
+      <source>Need help widget</source>
+      <translation>需要帮助的小部件</translation>
+    </message>
+    <message>
+      <source>Custom CSS</source>
+      <translation>自定义CSS</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>名字</translation>
+    </message>
+    <message>
+      <source>Need help header text</source>
+      <translation>需要帮助的标题文本</translation>
+    </message>
+    <message>
+      <source>Need help standard text</source>
+      <translation>需要帮助的标准文本</translation>
+    </message>
+    <message>
+      <source>Online status text</source>
+      <translation>在线状态文本</translation>
+    </message>
+    <message>
+      <source>Offline status text</source>
+      <translation>离线状态文本</translation>
+    </message>
+    <message>
+      <source>Background color</source>
+      <translation>背景颜色</translation>
+    </message>
+    <message>
+      <source>Status widget border color</source>
+      <translation>状态插件的边框颜色</translation>
+    </message>
+    <message>
+      <source>Text color</source>
+      <translation>文字颜色</translation>
+    </message>
+    <message>
+      <source>Logo image, visible in popup</source>
+      <translation>LOGO图片，弹出窗口可见</translation>
+    </message>
+    <message>
+      <source>Logo image, visible in widget left corner, 16x16</source>
+      <translation>LOGO图像，在小部件左上角显示，16 x 16</translation>
+    </message>
+    <message>
+      <source>Show copyright widget logo in left corner</source>
+      <translation>在左上角显示版权徽标小部件</translation>
+    </message>
+    <message>
+      <source>Widget copyright link</source>
+      <translation>版权小部件的链接</translation>
+    </message>
+    <message>
+      <source>Text above start chat form fields</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Online image</source>
+      <translation>在线图片</translation>
+    </message>
+    <message>
+      <source>Offline image</source>
+      <translation>离线图片</translation>
+    </message>
+    <message>
+      <source>Widget header background color</source>
+      <translation>控件标题的背景颜色</translation>
+    </message>
+    <message>
+      <source>Widget border color</source>
+      <translation>控件的边框颜色</translation>
+    </message>
+    <message>
+      <source>Need help background color</source>
+      <translation>需要帮助背景颜色</translation>
+    </message>
+    <message>
+      <source>Need help hover background color</source>
+      <translation>需要帮助的悬停背景颜色</translation>
+    </message>
+    <message>
+      <source>Need help text color</source>
+      <translation>需要帮助的文字颜色</translation>
+    </message>
+    <message>
+      <source>Need help border color</source>
+      <translation>需要帮助的背景颜色</translation>
+    </message>
+    <message>
+      <source>Need help close background color</source>
+      <translation>需要帮助关闭背景颜色</translation>
+    </message>
+    <message>
+      <source>Need help close hover background color</source>
+      <translation>需要帮助关闭悬停背景颜色</translation>
+    </message>
+    <message>
+      <source>Need help operator image</source>
+      <translation>需要帮助运营商形象图片</translation>
+    </message>
+    <message>
+      <source>Status widget additional CSS, takes effect after save</source>
+      <translation>状态部件附加CSS，保存后生效</translation>
+    </message>
+    <message>
+      <source>Widget container additional CSS, takes effect after save</source>
+      <translation>部件容器附加CSS，保存后生效</translation>
+    </message>
+    <message>
+      <source>Widget body additional CSS, takes effect after save</source>
+      <translation>部件主体附加CSS，保存后生效</translation>
+    </message>
+    <message>
+      <source>Widget themes</source>
+      <translation>控件主题</translation>
+    </message>
+  </context>
+  <context>
+    <name>chat/getstatus</name>
+    <message>
+      <source>Close</source>
+      <translation>关闭</translation>
+    </message>
+    <message>
+      <source>Open in a new window</source>
+      <translation>在新窗口中打开</translation>
+    </message>
+    <message>
+      <source>Minimize/Restore</source>
+      <translation>最小化/还原</translation>
+    </message>
+    <message>
+      <source>Live help is online...</source>
+      <translation>现场帮助在线...</translation>
+    </message>
+    <message>
+      <source>Need help?</source>
+      <translation>需要帮助吗？</translation>
+    </message>
+    <message>
+      <source>Our staff is always ready to help</source>
+      <translation>我们的工作人员总是乐于帮助</translation>
+    </message>
+    <message>
+      <source>Live help is offline...</source>
+      <translation>现场帮助离线...</translation>
+    </message>
+  </context>
+  <context>
     <name>abstract/proactivechatinvitation</name>
     <message>
       <source>If you want pro active chat invitation to work it has to be enabled in</source>
@@ -145,7 +510,11 @@
     </message>
     <message>
       <source>Requires name</source>
-      <translation type="unfinished"/>
+      <translation>需要名称</translation>
+    </message>
+    <message>
+      <source>Requires phone</source>
+      <translation>必须的电话号码</translation>
     </message>
     <message>
       <source>Show random operator profile</source>
@@ -153,7 +522,7 @@
     </message>
     <message>
       <source>Enter operators IDs from whom random operator should be shown, separated by comma</source>
-      <translation type="unfinished"/>
+      <translation>输入操作员 Id 从谁应该显示随机算子，用逗号分隔</translation>
     </message>
     <message>
       <source>Identifier, for what identifier this message should be shown, leave empty for all</source>
@@ -161,7 +530,7 @@
     </message>
     <message>
       <source>Department</source>
-      <translation type="unfinished"/>
+      <translation>新闻部</translation>
     </message>
     <message>
       <source>Matched times</source>
@@ -188,37 +557,6 @@
     </message>
   </context>
   <context>
-    <name>chat/getstatus</name>
-    <message>
-      <source>Close</source>
-      <translation>关闭</translation>
-    </message>
-    <message>
-      <source>Live help is online...</source>
-      <translation>现场帮助在线...</translation>
-    </message>
-    <message>
-      <source>Live help is offline...</source>
-      <translation>现场帮助离线...</translation>
-    </message>
-    <message>
-      <source>Open in a new window</source>
-      <translation>在新窗口中打开</translation>
-    </message>
-    <message>
-      <source>Minimize/Restore</source>
-      <translation>最小化/还原</translation>
-    </message>
-    <message>
-      <source>Need help?</source>
-      <translation>需要帮助吗？</translation>
-    </message>
-    <message>
-      <source>Our staff is always ready to help</source>
-      <translation>我们的工作人员总是乐于帮助</translation>
-    </message>
-  </context>
-  <context>
     <name>system/htmlcode</name>
     <message>
       <source>HTML code</source>
@@ -226,11 +564,11 @@
     </message>
     <message>
       <source>Popup width</source>
-      <translation type="unfinished"/>
+      <translation>弹出窗口宽度</translation>
     </message>
     <message>
       <source>Popup height, used only if iframe is used</source>
-      <translation type="unfinished"/>
+      <translation>使用只有使用 iframe 的弹出窗口高度</translation>
     </message>
     <message>
       <source>Identifier, this can be used as filter for pro active chat invitations and is use full having different messages for different domains. Only string without spaces or special characters.</source>
@@ -242,7 +580,7 @@
     </message>
     <message>
       <source>Offer timeout in days, after how many days show offers for the same visitor again, leave empty for session</source>
-      <translation type="unfinished"/>
+      <translation>在天内，提供超时多少天显示为同一位访客提供了再次后, 将保留为空为会话</translation>
     </message>
     <message>
       <source>Choose a language</source>
@@ -267,6 +605,14 @@
     <message>
       <source>Chatbox messages content height</source>
       <translation>客舱邮件内容的高度</translation>
+    </message>
+    <message>
+      <source>Theme</source>
+      <translation>主题</translation>
+    </message>
+    <message>
+      <source>Default</source>
+      <translation>默认</translation>
     </message>
     <message>
       <source>Copy the code from the text area to the page where you want it to be rendered</source>
@@ -321,6 +667,10 @@
       <translation>屏幕左侧中东</translation>
     </message>
     <message>
+      <source>Disable responsive layout for status widget.</source>
+      <translation>禁用响应布局状态小部件。</translation>
+    </message>
+    <message>
       <source>Disable minimize icon</source>
       <translation>禁用最小化图标</translation>
     </message>
@@ -354,7 +704,7 @@
     </message>
     <message>
       <source>Choose what form you want to embed</source>
-      <translation type="unfinished"/>
+      <translation>选择您想要嵌入什么的形式</translation>
     </message>
     <message>
       <source>Help us to grow</source>
@@ -379,6 +729,14 @@
     <message>
       <source>Any</source>
       <translation>任何</translation>
+    </message>
+    <message>
+      <source>Operator ID</source>
+      <translation>操作员ID</translation>
+    </message>
+    <message>
+      <source>To what operator chat should be assigned automatically?</source>
+      <translation>在线聊天自动分配给后台操作员？</translation>
     </message>
     <message>
       <source>Copy the code from the text area to the page where you want your status to appear</source>
@@ -433,6 +791,18 @@
       <translation>母语的位置 - 它会显示HTML嵌入</translation>
     </message>
     <message>
+      <source>Minimize action, applies only if status widget is at the bottom</source>
+      <translation>最小化操作，仅当状态插件位于页面底部时启用</translation>
+    </message>
+    <message>
+      <source>Keep where it was</source>
+      <translation>保持当前位置</translation>
+    </message>
+    <message>
+      <source>Minimize to bottom of the screen</source>
+      <translation>最小化到屏幕底部</translation>
+    </message>
+    <message>
       <source>System configuration</source>
       <translation>系统配置</translation>
     </message>
@@ -441,11 +811,11 @@
     <name>questionary/htmlcode</name>
     <message>
       <source>Show overlay</source>
-      <translation type="unfinished"/>
+      <translation>显示重叠</translation>
     </message>
     <message>
       <source>Show different offers for the same user</source>
-      <translation type="unfinished"/>
+      <translation>显示为相同的用户提供不同</translation>
     </message>
     <message>
       <source>Copy the code from the text area to the page header or footer</source>
@@ -472,31 +842,31 @@
     <name>browseoffer/index</name>
     <message>
       <source>Browse offers</source>
-      <translation type="unfinished"/>
+      <translation>浏览提供</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished"/>
+      <translation>一般</translation>
     </message>
     <message>
       <source>Browse your offers</source>
-      <translation type="unfinished"/>
+      <translation>浏览您的提供</translation>
     </message>
     <message>
       <source>HTML Code</source>
-      <translation type="unfinished"/>
+      <translation>HTML 代码</translation>
     </message>
     <message>
-      <source>List of forms</source>
-      <translation type="unfinished"/>
+      <source>Forms</source>
+      <translation>表单</translation>
     </message>
     <message>
-      <source>Page embed code</source>
-      <translation type="unfinished"/>
+      <source>Documents</source>
+      <translation>文档</translation>
     </message>
     <message>
       <source>Form</source>
-      <translation type="unfinished"/>
+      <translation>窗体</translation>
     </message>
   </context>
   <context>
@@ -535,6 +905,53 @@
     </message>
   </context>
   <context>
+    <name>chat/lists/search_panel</name>
+    <message>
+      <source>Delete selected</source>
+      <translation>删除所选</translation>
+    </message>
+    <message>
+      <source>Nick</source>
+      <translation>暱稱</translation>
+    </message>
+    <message>
+      <source>E-mail</source>
+      <translation>电子邮件</translation>
+    </message>
+    <message>
+      <source>Date range from to</source>
+      <translation>日期范围从到</translation>
+    </message>
+    <message>
+      <source>Department</source>
+      <translation>部门</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation>用户</translation>
+    </message>
+    <message>
+      <source>Search</source>
+      <translation>搜索</translation>
+    </message>
+    <message>
+      <source>Print</source>
+      <translation>打印</translation>
+    </message>
+    <message>
+      <source>Select department</source>
+      <translation>选择部门</translation>
+    </message>
+    <message>
+      <source>Select user</source>
+      <translation>选择用户</translation>
+    </message>
+    <message>
+      <source>Type to search</source>
+      <translation>要搜索的类型</translation>
+    </message>
+  </context>
+  <context>
     <name>chat/chat</name>
     <message>
       <source>Show/Hide right column</source>
@@ -546,31 +963,31 @@
     </message>
     <message>
       <source>Change chat status</source>
-      <translation type="unfinished"/>
+      <translation>更改聊天状态</translation>
     </message>
     <message>
       <source>Pending</source>
-      <translation type="unfinished"/>
+      <translation>挂起</translation>
     </message>
     <message>
       <source>Active</source>
-      <translation type="unfinished"/>
+      <translation>活动</translation>
     </message>
     <message>
       <source>Closed</source>
-      <translation type="unfinished"/>
+      <translation>关闭</translation>
     </message>
     <message>
       <source>Chatbox chat</source>
-      <translation type="unfinished"/>
+      <translation>Chatbox 聊天</translation>
     </message>
     <message>
       <source>Operators chat</source>
-      <translation type="unfinished"/>
+      <translation>经营者聊天</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished"/>
+      <translation>取消</translation>
     </message>
     <message>
       <source>This chat is closed.</source>
@@ -683,6 +1100,10 @@
       <translation>空...</translation>
     </message>
     <message>
+      <source>Please enter an IP to block</source>
+      <translation>请输入一个 IP 阻止</translation>
+    </message>
+    <message>
       <source>User was blocked!</source>
       <translation>用户被堵住了！</translation>
     </message>
@@ -721,6 +1142,10 @@
       <translation>位置</translation>
     </message>
     <message>
+      <source>Auto send</source>
+      <translation>自动发送</translation>
+    </message>
+    <message>
       <source>Edit message</source>
       <translation>编辑留言</translation>
     </message>
@@ -735,6 +1160,10 @@
     <message>
       <source>Edit canned message</source>
       <translation>编辑罐头讯息</translation>
+    </message>
+    <message>
+      <source>Automatically send this message to user then chat is accepted</source>
+      <translation>接受了聊天后自动向用户发送此消息</translation>
     </message>
     <message>
       <source>Delay in seconds</source>
@@ -761,12 +1190,28 @@
       <translation>请输入罐头消息</translation>
     </message>
     <message>
+      <source>Please choose a department</source>
+      <translation>请选择一个部门</translation>
+    </message>
+    <message>
       <source>Please enter a canned message</source>
       <translation>请输入罐头消息</translation>
     </message>
   </context>
   <context>
     <name>department/edit</name>
+    <message>
+      <source>Work hours, 24 hours format, 1 - 24</source>
+      <translation>工作小时，24 小时格式，1-24</translation>
+    </message>
+    <message>
+      <source>From, E.g. 8</source>
+      <translation>例如 8 日</translation>
+    </message>
+    <message>
+      <source>To, E.g. 17</source>
+      <translation>对，如 17</translation>
+    </message>
     <message>
       <source>Any</source>
       <translation>任何</translation>
@@ -789,11 +1234,11 @@
     </message>
     <message>
       <source>Will not be visible to visitor</source>
-      <translation type="unfinished"/>
+      <translation>不会对访问者可见</translation>
     </message>
     <message>
       <source>Hidden</source>
-      <translation type="unfinished"/>
+      <translation>隐藏</translation>
     </message>
     <message>
       <source>Delay in seconds before leave a message form is shown. 0 Means functionality is disabled, </source>
@@ -844,20 +1289,28 @@
       <translation>（星期日）</translation>
     </message>
     <message>
-      <source>Work hours, 24 hours format, 1 - 24</source>
-      <translation>工作小时，24 小时格式，1-24</translation>
+      <source>Work hours, 24 hours format, 1 - 24, minutes format 0 - 60</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>From, E.g. 8</source>
-      <translation>例如 8 日</translation>
+      <source>Hours from, E.g. 8</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>To, E.g. 17</source>
-      <translation>对，如 17</translation>
+      <source>Minutes from, E.g. 30</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <source>Notifications about new chats</source>
-      <translation>有关新聊天的通知</translation>
+      <source>Hours to, E.g. 17</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Minutes to, E.g. 30</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Notifications</source>
+      <translation>通知</translation>
     </message>
     <message>
       <source>XMPP recipients</source>
@@ -893,11 +1346,15 @@
     </message>
     <message>
       <source>Inform about unread messages if from last unread user message have passed (seconds)</source>
-      <translation type="unfinished"/>
+      <translation>通报未读邮件，如果从最后一个未读用户消息已通过 (秒)</translation>
     </message>
     <message>
       <source>Please enter value in seconds</source>
-      <translation type="unfinished"/>
+      <translation>请在几秒钟内输入的值</translation>
+    </message>
+    <message>
+      <source>Inform then chat is accepted by one of the staff members using</source>
+      <translation>告知然后由一个使用的工作人员接受了聊天</translation>
     </message>
     <message>
       <source>Other</source>
@@ -918,6 +1375,18 @@
     <message>
       <source>Timeout in seconds before chat is transfered to another department. Minimum 5 seconds.</source>
       <translation>超時聊天秒前被轉移到另一個部門。至少5秒。</translation>
+    </message>
+    <message>
+      <source>Execute new chat logic again for recipient department?</source>
+      <translation>执行新的聊天逻辑再次为收件人处吗？</translation>
+    </message>
+    <message>
+      <source>Execute unanswered chat logic again for recipient department?</source>
+      <translation>执行再次为收件人部门未答复的聊天逻辑吗？</translation>
+    </message>
+    <message>
+      <source>Auto assignment</source>
+      <translation>自动分配</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -975,7 +1444,7 @@
     </message>
     <message>
       <source>Click to change chat status</source>
-      <translation type="unfinished"/>
+      <translation>单击以更改聊天状态</translation>
     </message>
     <message>
       <source>Pending chat</source>
@@ -1008,6 +1477,10 @@
     <message>
       <source>Country</source>
       <translation>國家</translation>
+    </message>
+    <message>
+      <source>Time zone</source>
+      <translation>时区</translation>
     </message>
     <message>
       <source>City</source>
@@ -1083,15 +1556,15 @@
     </message>
     <message>
       <source>Redirect user to contact form.</source>
-      <translation type="unfinished"/>
+      <translation>重定向用户联系人窗体。</translation>
     </message>
     <message>
       <source>Print</source>
       <translation>打印</translation>
     </message>
     <message>
-      <source>Attatch uploaded file</source>
-      <translation>Attatch 上载文件</translation>
+      <source>Attach uploaded file</source>
+      <translation>上传的附件</translation>
     </message>
     <message>
       <source>Chat between operators, chat initializer</source>
@@ -1151,7 +1624,7 @@
     </message>
     <message>
       <source>Invalid chat status</source>
-      <translation type="unfinished"/>
+      <translation>无效聊天状态</translation>
     </message>
   </context>
   <context>
@@ -1192,10 +1665,6 @@
       <translation>新增聊天</translation>
     </message>
     <message>
-      <source>Empty...</source>
-      <translation>空...</translation>
-    </message>
-    <message>
       <source>Start chat</source>
       <translation>开始聊天</translation>
     </message>
@@ -1209,11 +1678,11 @@
     </message>
     <message>
       <source>Redirect user to contact form.</source>
-      <translation type="unfinished"/>
+      <translation>重定向用户联系人窗体。</translation>
     </message>
     <message>
       <source>Are you sure?</source>
-      <translation type="unfinished"/>
+      <translation>是否确定？</translation>
     </message>
     <message>
       <source>Accept chat</source>
@@ -1230,6 +1699,10 @@
     <message>
       <source>s.</source>
       <translation>秒。</translation>
+    </message>
+    <message>
+      <source>Empty...</source>
+      <translation>空...</translation>
     </message>
   </context>
   <context>
@@ -1318,7 +1791,7 @@
     <name>chat/startchat</name>
     <message>
       <source>Department is disabled</source>
-      <translation type="unfinished"/>
+      <translation>部被禁用</translation>
     </message>
     <message>
       <source>Name</source>
@@ -1343,6 +1816,14 @@
     <message>
       <source>Start chat</source>
       <translation>开始聊天</translation>
+    </message>
+    <message>
+      <source>Live support is not available in your country</source>
+      <translation>在线支持目前在您的国家不可用</translation>
+    </message>
+    <message>
+      <source>Live Support</source>
+      <translation>現場支持</translation>
     </message>
     <message>
       <source>There are no online operators at the moment, please leave a message</source>
@@ -1373,6 +1854,22 @@
       <translation>當前離線</translation>
     </message>
     <message>
+      <source>Department is offline</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Go to leave a message form</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Cancel and choose another department</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>characters</source>
+      <translation>字符</translation>
+    </message>
+    <message>
       <source>Type your message here and hit enter to send...</source>
       <translation>輸入您的留言，並按下回車鍵發送...</translation>
     </message>
@@ -1391,6 +1888,10 @@
     <message>
       <source>There are no online operators at the moment, please leave your message</source>
       <translation>此刻有没有在线运营商，请留下您的消息</translation>
+    </message>
+    <message>
+      <source>Choose your language</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <source>You do not have permission to chat! Please contact site owner.</source>
@@ -1445,10 +1946,6 @@
       <translation>需要</translation>
     </message>
     <message>
-      <source>Live Support</source>
-      <translation>現場支持</translation>
-    </message>
-    <message>
       <source>Please enter a message, max characters</source>
       <translation>请输入一条消息，最大字符</translation>
     </message>
@@ -1478,6 +1975,10 @@
     <message>
       <source>At this moment there are no logged in support staff members, but you can leave your messages</source>
       <translation>此时，有没有记录的工作人员支持，但您可以留下您的讯息</translation>
+    </message>
+    <message>
+      <source>Visitor has been redirected to contact form</source>
+      <translation>访客已经被重定向到联系表单页面</translation>
     </message>
   </context>
   <context>
@@ -1535,7 +2036,7 @@
     </message>
     <message>
       <source>Change my visibility to visible/invisible</source>
-      <translation type="unfinished"/>
+      <translation>更改我可见到可见/不可见</translation>
     </message>
     <message>
       <source>Change my status to online/offline</source>
@@ -1577,6 +2078,208 @@
     <message>
       <source>Please enter text!</source>
       <translation>请输入您的文字！</translation>
+    </message>
+  </context>
+  <context>
+    <name>chat/geoadjustment</name>
+    <message>
+      <source>GEO adjustment</source>
+      <translation>地理位置调整</translation>
+    </message>
+    <message>
+      <source>Apply to chat widget status indicator these rules also? performance decrease is associated with this option</source>
+      <translation>也让聊天状态监测插件使用这些规则？系统性能减低一般与开启此选项有关</translation>
+    </message>
+    <message>
+      <source>Make chat status normal for these countries, countries can be separated by comma &quot;de,gb,us,fr&quot; means chat would be shown as usual only for these countries.</source>
+      <translation>让聊天状态对于这些能用逗号列出国家代码的国家标准化，通常聊天只在以上这些国家展现</translation>
+    </message>
+    <message>
+      <source>For</source>
+      <translation>对于</translation>
+    </message>
+    <message>
+      <source>all</source>
+      <translation>全部</translation>
+    </message>
+    <message>
+      <source>custom</source>
+      <translation>自定义</translation>
+    </message>
+    <message>
+      <source>E.g. ar,pl</source>
+      <translation>例如阿根廷，波兰</translation>
+    </message>
+    <message>
+      <source>Other countries, put widget/chat status to</source>
+      <translation>使用插件/聊天状态的其他国家地区</translation>
+    </message>
+    <message>
+      <source>offline status</source>
+      <translation>离线状态</translation>
+    </message>
+    <message>
+      <source>hidden/disabled, widget will not be shown</source>
+      <translation>隐藏/禁用，插件将不会展示</translation>
+    </message>
+    <message>
+      <source>For unmatched countries put chat status to</source>
+      <translation>将聊天记录分配到不匹配的国家地区</translation>
+    </message>
+    <message>
+      <source>normal status</source>
+      <translation>正常状态</translation>
+    </message>
+  </context>
+  <context>
+    <name>system/xmpp</name>
+    <message>
+      <source>Geo adjustments active</source>
+      <translation>激活地理位置调整</translation>
+    </message>
+    <message>
+      <source>Settings updated</source>
+      <translation>更新设置</translation>
+    </message>
+    <message>
+      <source>XMPP settings</source>
+      <translation>XMPP 设置</translation>
+    </message>
+    <message>
+      <source>XMPP active</source>
+      <translation>XMPP 活跃</translation>
+    </message>
+    <message>
+      <source>XMPP Message content</source>
+      <translation>XMPP 邮件内容</translation>
+    </message>
+    <message>
+      <source>XMPP Message about accepted chat</source>
+      <translation>关于接受聊天 XMPP 消息</translation>
+    </message>
+    <message>
+      <source>XMPP</source>
+      <translation>XMPP</translation>
+    </message>
+    <message>
+      <source>Use standard XMPP service</source>
+      <translation>使用标准 XMPP 服务</translation>
+    </message>
+    <message>
+      <source>Host</source>
+      <translation>主持人</translation>
+    </message>
+    <message>
+      <source>Port</source>
+      <translation>端口</translation>
+    </message>
+    <message>
+      <source>Login</source>
+      <translation>注册</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>密码</translation>
+    </message>
+    <message>
+      <source>Resource</source>
+      <translation>资源</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>服务器</translation>
+    </message>
+    <message>
+      <source>Recipients</source>
+      <translation>收件人</translation>
+    </message>
+    <message>
+      <source>Default recipients</source>
+      <translation>默认的收件人</translation>
+    </message>
+    <message>
+      <source>Test recipients</source>
+      <translation>测试的收件人</translation>
+    </message>
+    <message>
+      <source>Individual recipients</source>
+      <translation>单个收件人</translation>
+    </message>
+    <message>
+      <source>Test group recipients</source>
+      <translation>测试组收件人</translation>
+    </message>
+    <message>
+      <source>Test message will be send to your account e-mail</source>
+      <translation>测试消息将会发送到您的帐户的电子邮件</translation>
+    </message>
+    <message>
+      <source>GTalk</source>
+      <translation>GTalk</translation>
+    </message>
+    <message>
+      <source>Use GTalk for messaging</source>
+      <translation>使用 GTalk 的消息</translation>
+    </message>
+    <message>
+      <source>Information for your google app</source>
+      <translation>你的 google 应用程序的信息</translation>
+    </message>
+    <message>
+      <source>Redirect URL, this url you will have to enter in your google app configuration</source>
+      <translation>重定向的 URL，您必须在您的谷歌应用程序配置中输入此 url</translation>
+    </message>
+    <message>
+      <source>Enter your app information bellow</source>
+      <translation>请输入您的应用程序信息 · 贝娄</translation>
+    </message>
+    <message>
+      <source>OAuth 2.0 Client ID</source>
+      <translation>OAuth 2.0 客户端 ID</translation>
+    </message>
+    <message>
+      <source>Please enter your Client ID</source>
+      <translation>请输入您的客户端 ID</translation>
+    </message>
+    <message>
+      <source>Client secret</source>
+      <translation>客户端的秘密</translation>
+    </message>
+    <message>
+      <source>This message will be send to your e-mail</source>
+      <translation>此消息将会发送到您的电子邮件</translation>
+    </message>
+    <message>
+      <source>Send test message</source>
+      <translation>发送测试消息</translation>
+    </message>
+    <message>
+      <source>Revoke access token</source>
+      <translation>撤消访问令牌</translation>
+    </message>
+    <message>
+      <source>Revoke permission to send a message</source>
+      <translation>撤消权限发送一条消息</translation>
+    </message>
+    <message>
+      <source>Authentificate and grant permission to send a message</source>
+      <translation>Authentificate 和授予的权限，将发送一条消息</translation>
+    </message>
+    <message>
+      <source>Grant permission to send a message</source>
+      <translation>授予权限发送一条消息</translation>
+    </message>
+    <message>
+      <source>Succesfully authorised, now you can try to send a message</source>
+      <translation>授权成功，现在您可以尝试发送一条消息</translation>
+    </message>
+    <message>
+      <source>Token was revoked</source>
+      <translation>令牌已被吊销</translation>
+    </message>
+    <message>
+      <source>XMPP message was sent succesfuly</source>
+      <translation>XMPP 消息被发送 succesfuly</translation>
     </message>
   </context>
   <context>
@@ -1710,12 +2413,16 @@
       <translation>經度</translation>
     </message>
     <message>
+      <source>Time zone</source>
+      <translation>时区</translation>
+    </message>
+    <message>
       <source>Identifier</source>
       <translation>识别码</translation>
     </message>
     <message>
       <source>Additional information</source>
-      <translation type="unfinished"/>
+      <translation>附加信息</translation>
     </message>
     <message>
       <source>Last activity</source>
@@ -1814,6 +2521,14 @@
       <translation>聊天配置</translation>
     </message>
     <message>
+      <source>Enable/Disable sound about new visitor</source>
+      <translation>启用/禁用新访客的声音提醒</translation>
+    </message>
+    <message>
+      <source>Enable/Disable browser notifications about new visitor</source>
+      <translation>启用/禁用浏览器通知关于新访客</translation>
+    </message>
+    <message>
       <source>List</source>
       <translation>表</translation>
     </message>
@@ -1823,15 +2538,15 @@
     </message>
     <message>
       <source>Group list by</source>
-      <translation type="unfinished"/>
+      <translation>按组列表</translation>
     </message>
     <message>
       <source>Group by</source>
-      <translation type="unfinished"/>
+      <translation>通过分组</translation>
     </message>
     <message>
       <source>User country</source>
-      <translation type="unfinished"/>
+      <translation>用户国家</translation>
     </message>
     <message>
       <source>Page</source>
@@ -1839,15 +2554,15 @@
     </message>
     <message>
       <source>Page title</source>
-      <translation type="unfinished"/>
+      <translation>页标题</translation>
     </message>
     <message>
       <source>Referrer</source>
-      <translation type="unfinished"/>
+      <translation>推荐人</translation>
     </message>
     <message>
       <source>Department</source>
-      <translation type="unfinished"/>
+      <translation>新闻部</translation>
     </message>
     <message>
       <source>Refresh list every</source>
@@ -1867,11 +2582,11 @@
     </message>
     <message>
       <source>minute</source>
-      <translation type="unfinished"/>
+      <translation>分钟</translation>
     </message>
     <message>
       <source>minutes</source>
-      <translation type="unfinished"/>
+      <translation>分钟</translation>
     </message>
     <message>
       <source>hour</source>
@@ -1884,6 +2599,14 @@
     <message>
       <source>days</source>
       <translation>天</translation>
+    </message>
+    <message>
+      <source>Max records to return</source>
+      <translation>返回的最大记录</translation>
+    </message>
+    <message>
+      <source>Visitor local time</source>
+      <translation>访客本当地时间</translation>
     </message>
     <message>
       <source>Status</source>
@@ -2041,6 +2764,14 @@
       <translation>杂项</translation>
     </message>
     <message>
+      <source>Cookie related</source>
+      <translation>相关的 cookie</translation>
+    </message>
+    <message>
+      <source>Chat related</source>
+      <translation>聊天相关</translation>
+    </message>
+    <message>
       <source>Workflow</source>
       <translation>工作流</translation>
     </message>
@@ -2072,68 +2803,8 @@
       <translation>系统配置</translation>
     </message>
     <message>
-      <source>Chat related</source>
-      <translation>交谈相关</translation>
-    </message>
-    <message>
-      <source>Departments</source>
-      <translation>部门</translation>
-    </message>
-    <message>
-      <source>Blocked users</source>
-      <translation>被阻止的用户</translation>
-    </message>
-    <message>
-      <source>Chat configuration</source>
-      <translation>聊天配置</translation>
-    </message>
-    <message>
-      <source>GEO detection configuration</source>
-      <translation>GEO检测配置</translation>
-    </message>
-    <message>
-      <source>Synchronization and sound settings</source>
-      <translation>同步和声音设置</translation>
-    </message>
-    <message>
-      <source>Start chat form settings</source>
-      <translation>开始聊天的形式设置</translation>
-    </message>
-    <message>
-      <source>Canned messages</source>
-      <translation>罐头消息</translation>
-    </message>
-    <message>
-      <source>E-mail templates</source>
-      <translation>电子邮件模板</translation>
-    </message>
-    <message>
-      <source>Pro active chat invitations</source>
-      <translation>临主动聊天邀请</translation>
-    </message>
-    <message>
-      <source>Auto responder</source>
-      <translation>自動應答</translation>
-    </message>
-    <message>
-      <source>SMTP settings</source>
-      <translation>SMTP设置</translation>
-    </message>
-    <message>
-      <source>XMPP settings</source>
-      <translation>XMPP 设置</translation>
-    </message>
-    <message>
-      <source>Languages configuration</source>
-      <translation>语言配置</translation>
-    </message>
-    <message>
-      <source>Chats list</source>
-      <translation>聊天列表</translation>
-    </message>
-    <message>
-      <source>Chat archive</source>
-      <translation>聊天記錄存檔</translation>
+      <source>System</source>
+      <translation>系统</translation>
     </message>
     <message>
       <source>Time zone settings</source>
@@ -2142,6 +2813,34 @@
     <message>
       <source>Update information</source>
       <translation>更新信息</translation>
+    </message>
+    <message>
+      <source>SMTP settings</source>
+      <translation>SMTP设置</translation>
+    </message>
+    <message>
+      <source>E-mail templates</source>
+      <translation>电子邮件模板</translation>
+    </message>
+    <message>
+      <source>Languages configuration</source>
+      <translation>语言配置</translation>
+    </message>
+    <message>
+      <source>Users</source>
+      <translation>用户</translation>
+    </message>
+    <message>
+      <source>List of groups</source>
+      <translation>组列表</translation>
+    </message>
+    <message>
+      <source>List of roles</source>
+      <translation>角色一览</translation>
+    </message>
+    <message>
+      <source>Embed code</source>
+      <translation>嵌入代码</translation>
     </message>
     <message>
       <source>Live help embed code</source>
@@ -2161,35 +2860,75 @@
     </message>
     <message>
       <source>Browse offers embed code</source>
-      <translation type="unfinished"/>
+      <translation>浏览提供嵌入代码</translation>
     </message>
     <message>
-      <source>Form module</source>
-      <translation type="unfinished"/>
+      <source>Live help configuration</source>
+      <translation>配置Live Help</translation>
+    </message>
+    <message>
+      <source>Departments</source>
+      <translation>部门</translation>
+    </message>
+    <message>
+      <source>Blocked users</source>
+      <translation>被阻止的用户</translation>
+    </message>
+    <message>
+      <source>Chat configuration</source>
+      <translation>聊天配置</translation>
+    </message>
+    <message>
+      <source>GEO detection configuration</source>
+      <translation>GEO检测配置</translation>
+    </message>
+    <message>
+      <source>GEO adjustment</source>
+      <translation>地理位置调整</translation>
+    </message>
+    <message>
+      <source>Synchronization and sound settings</source>
+      <translation>同步和声音设置</translation>
+    </message>
+    <message>
+      <source>Start chat form settings</source>
+      <translation>开始聊天的形式设置</translation>
+    </message>
+    <message>
+      <source>Canned messages</source>
+      <translation>罐头消息</translation>
+    </message>
+    <message>
+      <source>Pro active chat invitations</source>
+      <translation>临主动聊天邀请</translation>
+    </message>
+    <message>
+      <source>Auto responder</source>
+      <translation>自動應答</translation>
+    </message>
+    <message>
+      <source>XMPP settings</source>
+      <translation>XMPP 设置</translation>
+    </message>
+    <message>
+      <source>Chats list</source>
+      <translation>聊天列表</translation>
+    </message>
+    <message>
+      <source>Chat archive</source>
+      <translation>聊天記錄存檔</translation>
     </message>
     <message>
       <source>Statistic</source>
       <translation>统计</translation>
     </message>
     <message>
-      <source>Users and their permissions</source>
-      <translation>用户及其权限</translation>
+      <source>Maintenance</source>
+      <translation>维护</translation>
     </message>
     <message>
-      <source>Users</source>
-      <translation>用户</translation>
-    </message>
-    <message>
-      <source>List of groups</source>
-      <translation>组列表</translation>
-    </message>
-    <message>
-      <source>List of roles</source>
-      <translation>角色一览</translation>
-    </message>
-    <message>
-      <source>Files uploads configuration</source>
-      <translation>文件上传配置</translation>
+      <source>Files</source>
+      <translation>文件</translation>
     </message>
     <message>
       <source>Files upload configuration</source>
@@ -2200,8 +2939,20 @@
       <translation>文件列表</translation>
     </message>
     <message>
-      <source>Other</source>
-      <translation>其他</translation>
+      <source>Theming</source>
+      <translation>主题化</translation>
+    </message>
+    <message>
+      <source>Widget themes</source>
+      <translation>小部件主题</translation>
+    </message>
+    <message>
+      <source>Import new themes</source>
+      <translation>导入新主题</translation>
+    </message>
+    <message>
+      <source>Default theme</source>
+      <translation>默认主题</translation>
     </message>
     <message>
       <source>File configuration</source>
@@ -2248,6 +2999,10 @@
     <message>
       <source>Empty...</source>
       <translation>空...</translation>
+    </message>
+    <message>
+      <source>Assigned operator</source>
+      <translation>指定的操作员</translation>
     </message>
     <message>
       <source>Clean cache</source>
@@ -2306,6 +3061,10 @@
       <translation>在线访客</translation>
     </message>
     <message>
+      <source>Extra modules</source>
+      <translation>扩展模块</translation>
+    </message>
+    <message>
       <source>Questionary</source>
       <translation>问卷</translation>
     </message>
@@ -2319,7 +3078,7 @@
     </message>
     <message>
       <source>Browse offers</source>
-      <translation type="unfinished"/>
+      <translation>浏览提供</translation>
     </message>
     <message>
       <source>Account</source>
@@ -2338,45 +3097,33 @@
     </message>
   </context>
   <context>
-    <name>chat/lists/search_panel</name>
+    <name>chat/maintenance</name>
     <message>
-      <source>Nick</source>
-      <translation>暱稱</translation>
+      <source>Maintenance</source>
+      <translation>维护</translation>
     </message>
     <message>
-      <source>E-mail</source>
-      <translation>电子邮件</translation>
+      <source>Automatic chats close, click to close old chats</source>
+      <translation>自动关闭聊天，单击关闭旧聊天</translation>
     </message>
     <message>
-      <source>Date range from to</source>
-      <translation>日期范围从到</translation>
+      <source>Automatic chats purge, click to purge old chats</source>
+      <translation>自动聊天记录清除，请单击以清除旧的聊天记录</translation>
     </message>
     <message>
-      <source>Department</source>
-      <translation>部门</translation>
-    </message>
-    <message>
-      <source>User</source>
-      <translation>用户</translation>
-    </message>
-    <message>
-      <source>Search</source>
-      <translation>搜索</translation>
-    </message>
-    <message>
-      <source>Print</source>
+      <source>Update chats duration by using new algorithm</source>
       <translation type="unfinished"/>
     </message>
     <message>
-      <source>Select department</source>
-      <translation>选择部门</translation>
+      <source>Closed chats</source>
+      <translation>已关闭的聊天</translation>
     </message>
     <message>
-      <source>Select user</source>
-      <translation>选择用户</translation>
+      <source>Purged chats</source>
+      <translation>清除聊天记录</translation>
     </message>
     <message>
-      <source>Type to search</source>
+      <source>Chats duration was updated</source>
       <translation type="unfinished"/>
     </message>
   </context>
@@ -2522,11 +3269,11 @@
     </message>
     <message>
       <source>Requires e-mail</source>
-      <translation type="unfinished"/>
+      <translation>要求电子邮件</translation>
     </message>
     <message>
       <source>Requires name</source>
-      <translation type="unfinished"/>
+      <translation>需要名称</translation>
     </message>
     <message>
       <source>Send the message</source>
@@ -2766,6 +3513,114 @@
       <translation>统计</translation>
     </message>
     <message>
+      <source>User</source>
+      <translation>用户</translation>
+    </message>
+    <message>
+      <source>Thumbs up</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of Thumbs Up</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Thumbs down</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of Thumbs Down</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Country</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chats</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of chats by country</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Messages</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of messages by user</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Month</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Closed</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Active</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Operators</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Pending</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chats number by statuses</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Visitors initiated</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Proactive</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Proactive chats number vs visitors initiated</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Visitors</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>System</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Messages types</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Number of chats per hour, average chat duration</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Chats statistic</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Hourly statistic</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Country statistic</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Users statisic</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Total statistic</source>
       <translation>总统计</translation>
     </message>
@@ -2820,10 +3675,6 @@
     <message>
       <source>Operators last 24h statistic, top 100 by chats number</source>
       <translation>运营商过去24小时的统计，前100名聊天号码</translation>
-    </message>
-    <message>
-      <source>User</source>
-      <translation>用户</translation>
     </message>
     <message>
       <source>Total messages</source>
@@ -3260,6 +4111,10 @@
       <translation>更新</translation>
     </message>
     <message>
+      <source>Updating...</source>
+      <translation>正在更新...</translation>
+    </message>
+    <message>
       <source>Logged user</source>
       <translation>登录的用户</translation>
     </message>
@@ -3309,11 +4164,11 @@
     </message>
     <message>
       <source>Job title</source>
-      <translation type="unfinished"/>
+      <translation>职位名称</translation>
     </message>
     <message>
       <source>Chat status will not change upon pending chat opening</source>
-      <translation type="unfinished"/>
+      <translation>聊天状态不会更改时挂起的打开聊天</translation>
     </message>
     <message>
       <source>Skype</source>
@@ -3341,7 +4196,7 @@
     </message>
     <message>
       <source>All departments</source>
-      <translation type="unfinished"/>
+      <translation>所有部门</translation>
     </message>
     <message>
       <source>Visible lists</source>
@@ -3368,12 +4223,24 @@
       <translation>个人罐装的消息</translation>
     </message>
     <message>
+      <source>Pending chats</source>
+      <translation>等待中的聊天</translation>
+    </message>
+    <message>
+      <source>I can see all pending chats, not only assigned to me</source>
+      <translation>我可以看到所有待定的聊天，不只是分配给我的</translation>
+    </message>
+    <message>
       <source>Account updated</source>
       <translation>帐户更新</translation>
     </message>
     <message>
       <source>Delete</source>
       <translation>删除</translation>
+    </message>
+    <message>
+      <source>User can see all pending chats, not only assigned to him</source>
+      <translation>用户可以看到所有待定的聊天，不只分配给他的</translation>
     </message>
     <message>
       <source>Please enter a username!</source>
@@ -3394,6 +4261,21 @@
     <message>
       <source>Passwords mismatch</source>
       <translation>密码不匹配</translation>
+    </message>
+  </context>
+  <context>
+    <name>chat/operatorsbalancing</name>
+    <message>
+      <source>Active</source>
+      <translation>活动</translation>
+    </message>
+    <message>
+      <source>Maximum number of active chats user can have at a time, 0 - unlimited</source>
+      <translation>同时进行的最大活跃聊天用户数，0-无限</translation>
+    </message>
+    <message>
+      <source>Automatically assign chat to another operator if operator did not accepted chat in seconds, 0 - disabled</source>
+      <translation>如果操作员没有回应聊天请求在几秒钟内将自动指派给另一个操作员，0-禁用</translation>
     </message>
   </context>
   <context>
@@ -3657,6 +4539,102 @@
     </message>
   </context>
   <context>
+    <name>form/collected</name>
+    <message>
+      <source>Download XLS</source>
+      <translation>下载 XLS</translation>
+    </message>
+    <message>
+      <source>URL</source>
+      <translation>URL</translation>
+    </message>
+    <message>
+      <source>Name</source>
+      <translation>名称</translation>
+    </message>
+    <message>
+      <source>Intro</source>
+      <translation>简介</translation>
+    </message>
+    <message>
+      <source>Time</source>
+      <translation>时间</translation>
+    </message>
+    <message>
+      <source>IP</source>
+      <translation>IP</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>视图</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>下载</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>删除</translation>
+    </message>
+  </context>
+  <context>
+    <name>form/fill</name>
+    <message>
+      <source>Return</source>
+      <translation>返回</translation>
+    </message>
+    <message>
+      <source>Submit</source>
+      <translation>提交</translation>
+    </message>
+    <message>
+      <source>Information collected</source>
+      <translation>收集的信息</translation>
+    </message>
+    <message>
+      <source>is required</source>
+      <translation>需要</translation>
+    </message>
+    <message>
+      <source>invalid date format</source>
+      <translation>日期格式无效</translation>
+    </message>
+  </context>
+  <context>
+    <name>form/index</name>
+    <message>
+      <source>Form</source>
+      <translation>窗体</translation>
+    </message>
+    <message>
+      <source>List of forms</source>
+      <translation>窗体的列表</translation>
+    </message>
+    <message>
+      <source>Page embed code</source>
+      <translation>页面嵌入代码</translation>
+    </message>
+    <message>
+      <source>Date</source>
+      <translation>日期</translation>
+    </message>
+  </context>
+  <context>
+    <name>form/viewcollected</name>
+    <message>
+      <source>collected information</source>
+      <translation>收集到的信息</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>下载</translation>
+    </message>
+    <message>
+      <source>Collected information</source>
+      <translation>收集到的信息</translation>
+    </message>
+  </context>
+  <context>
     <name>kernel/nopermission</name>
     <message>
       <source>Go back</source>
@@ -3802,10 +4780,6 @@
       <translation>新政策</translation>
     </message>
     <message>
-      <source>Assigned functions</source>
-      <translation>分配的功能</translation>
-    </message>
-    <message>
       <source>Choose a module</source>
       <translation>选择一个模块</translation>
     </message>
@@ -3818,16 +4792,16 @@
       <translation>选择一个模块的功能</translation>
     </message>
     <message>
-      <source>All functions</source>
-      <translation>所有的功能</translation>
-    </message>
-    <message>
       <source>Save</source>
       <translation>节省</translation>
     </message>
     <message>
       <source>Cancel</source>
       <translation>取消</translation>
+    </message>
+    <message>
+      <source>All functions</source>
+      <translation>所有的功能</translation>
     </message>
   </context>
   <context>
@@ -4301,6 +5275,10 @@
       <translation>助手聊天的实时更新</translation>
     </message>
     <message>
+      <source>Comparing current database structure, please wait...</source>
+      <translation>比较当前数据库的结构，请稍候...</translation>
+    </message>
+    <message>
       <source>Time zone</source>
       <translation>时区</translation>
     </message>
@@ -4407,20 +5385,16 @@
       <translation>当前版本</translation>
     </message>
     <message>
-      <source>Last database update</source>
-      <translation>最后一次数据库更新</translation>
-    </message>
-    <message>
       <source>News</source>
       <translation>新闻</translation>
     </message>
     <message>
-      <source>Missing updates from new versions.</source>
-      <translation>新版本中缺少的更新。</translation>
-    </message>
-    <message>
       <source>Update instructions</source>
       <translation>更新说明</translation>
+    </message>
+    <message>
+      <source>Missing updates from new versions.</source>
+      <translation>新版本中缺少的更新。</translation>
     </message>
     <message>
       <source>You are running current version. No updates required</source>
@@ -4432,10 +5406,94 @@
     </message>
   </context>
   <context>
+    <name>update/statusdb</name>
+    <message>
+      <source>Database structure check</source>
+      <translation>数据库结构检查</translation>
+    </message>
+    <message>
+      <source>Your database does not require any updates</source>
+      <translation>您的数据库不需要任何更新</translation>
+    </message>
+    <message>
+      <source>Update database</source>
+      <translation>更新数据库</translation>
+    </message>
+    <message>
+      <source>Queries which will be executed on update</source>
+      <translation>查询将被执行的更新</translation>
+    </message>
+  </context>
+  <context>
+    <name>theme/index</name>
+    <message>
+      <source>Default theme</source>
+      <translation>默认主题</translation>
+    </message>
+    <message>
+      <source>Theme</source>
+      <translation>主题</translation>
+    </message>
+    <message>
+      <source>Widget themes</source>
+      <translation>小部件主题</translation>
+    </message>
+    <message>
+      <source>Import a new theme</source>
+      <translation>导入一个新主题</translation>
+    </message>
+    <message>
+      <source>Themes</source>
+      <translation>主题</translation>
+    </message>
+    <message>
+      <source>Import theme</source>
+      <translation>导入主题</translation>
+    </message>
+  </context>
+  <context>
+    <name>theme/default</name>
+    <message>
+      <source>Set as default theme</source>
+      <translation>设置为默认主题</translation>
+    </message>
+  </context>
+  <context>
+    <name>theme/import</name>
+    <message>
+      <source>Default theme was set</source>
+      <translation>默认主题已设置</translation>
+    </message>
+    <message>
+      <source>Import theme</source>
+      <translation>导入主题</translation>
+    </message>
+    <message>
+      <source>File</source>
+      <translation>文件</translation>
+    </message>
+    <message>
+      <source>Import</source>
+      <translation>导入</translation>
+    </message>
+    <message>
+      <source>Theme imported</source>
+      <translation>主题已导入</translation>
+    </message>
+    <message>
+      <source>Could not import a new theme!</source>
+      <translation>无法导入一个新的主题！</translation>
+    </message>
+    <message>
+      <source>Invalid file!</source>
+      <translation>无效文件！</translation>
+    </message>
+  </context>
+  <context>
     <name>user/new</name>
     <message>
       <source>Invisible mode</source>
-      <translation type="unfinished"/>
+      <translation>隐形模式</translation>
     </message>
     <message>
       <source>User group</source>
@@ -4486,12 +5544,12 @@
       <translation>照片</translation>
     </message>
     <message>
-      <source>Departments</source>
-      <translation>部门</translation>
-    </message>
-    <message>
       <source>Save</source>
       <translation>节省</translation>
+    </message>
+    <message>
+      <source>Departments</source>
+      <translation>部门</translation>
     </message>
     <message>
       <source>Please choose a default user group</source>
@@ -4805,149 +5863,6 @@
     </message>
   </context>
   <context>
-    <name>system/xmpp</name>
-    <message>
-      <source>XMPP settings</source>
-      <translation>XMPP 设置</translation>
-    </message>
-    <message>
-      <source>XMPP active</source>
-      <translation>XMPP 活跃</translation>
-    </message>
-    <message>
-      <source>XMPP Message content</source>
-      <translation>XMPP 邮件内容</translation>
-    </message>
-    <message>
-      <source>XMPP</source>
-      <translation>XMPP</translation>
-    </message>
-    <message>
-      <source>Use standard XMPP service</source>
-      <translation>使用标准 XMPP 服务</translation>
-    </message>
-    <message>
-      <source>Host</source>
-      <translation>主持人</translation>
-    </message>
-    <message>
-      <source>Port</source>
-      <translation>端口</translation>
-    </message>
-    <message>
-      <source>Login</source>
-      <translation>注册</translation>
-    </message>
-    <message>
-      <source>Password</source>
-      <translation>密码</translation>
-    </message>
-    <message>
-      <source>Resource</source>
-      <translation>资源</translation>
-    </message>
-    <message>
-      <source>Server</source>
-      <translation>服务器</translation>
-    </message>
-    <message>
-      <source>Recipients</source>
-      <translation>收件人</translation>
-    </message>
-    <message>
-      <source>Default recipients</source>
-      <translation>默认的收件人</translation>
-    </message>
-    <message>
-      <source>Test recipients</source>
-      <translation>测试的收件人</translation>
-    </message>
-    <message>
-      <source>Individual recipients</source>
-      <translation>单个收件人</translation>
-    </message>
-    <message>
-      <source>Test group recipients</source>
-      <translation>测试组收件人</translation>
-    </message>
-    <message>
-      <source>Test message will be send to your account e-mail</source>
-      <translation>测试消息将会发送到您的帐户的电子邮件</translation>
-    </message>
-    <message>
-      <source>GTalk</source>
-      <translation>GTalk</translation>
-    </message>
-    <message>
-      <source>Use GTalk for messaging</source>
-      <translation>使用 GTalk 的消息</translation>
-    </message>
-    <message>
-      <source>Information for your google app</source>
-      <translation>你的 google 应用程序的信息</translation>
-    </message>
-    <message>
-      <source>Redirect URL, this url you will have to enter in your google app configuration</source>
-      <translation>重定向的 URL，您必须在您的谷歌应用程序配置中输入此 url</translation>
-    </message>
-    <message>
-      <source>Enter your app information bellow</source>
-      <translation>请输入您的应用程序信息 · 贝娄</translation>
-    </message>
-    <message>
-      <source>OAuth 2.0 Client ID</source>
-      <translation>OAuth 2.0 客户端 ID</translation>
-    </message>
-    <message>
-      <source>Please enter your Client ID</source>
-      <translation>请输入您的客户端 ID</translation>
-    </message>
-    <message>
-      <source>Client secret</source>
-      <translation>客户端的秘密</translation>
-    </message>
-    <message>
-      <source>This message will be send to your e-mail</source>
-      <translation>此消息将会发送到您的电子邮件</translation>
-    </message>
-    <message>
-      <source>Send test message</source>
-      <translation>发送测试消息</translation>
-    </message>
-    <message>
-      <source>Revoke access token</source>
-      <translation>撤消访问令牌</translation>
-    </message>
-    <message>
-      <source>Revoke permission to send a message</source>
-      <translation>撤消权限发送一条消息</translation>
-    </message>
-    <message>
-      <source>Authentificate and grant permission to send a message</source>
-      <translation>Authentificate 和授予的权限，将发送一条消息</translation>
-    </message>
-    <message>
-      <source>Grant permission to send a message</source>
-      <translation>授予权限发送一条消息</translation>
-    </message>
-    <message>
-      <source>Settings updated</source>
-      <translation>更新设置</translation>
-    </message>
-    <message>
-      <source>Succesfully authorised, now you can try to send a message</source>
-      <translation>授权成功，现在您可以尝试发送一条消息</translation>
-    </message>
-    <message>
-      <source>Token was revoked</source>
-      <translation>令牌已被吊销</translation>
-    </message>
-    <message>
-      <source>XMPP message was sent succesfuly</source>
-      <translation>XMPP 消息被发送 succesfuly</translation>
-    </message>
-  </context>
-  <context>
     <name>file/file</name>
     <message>
       <source>Download file</source>
@@ -4963,6 +5878,10 @@
     <message>
       <source>from</source>
       <translation>從</translation>
+    </message>
+    <message>
+      <source>Chat was automatically closed by cron</source>
+      <translation>通过计划任务 corn 自动关闭聊天</translation>
     </message>
     <message>
       <source>Support staff member has closed this chat</source>
@@ -4989,7 +5908,7 @@
     </message>
     <message>
       <source>Minimum 5 seconds</source>
-      <translation type="unfinished"/>
+      <translation>最低 5 秒</translation>
     </message>
     <message>
       <source>Transfer department has to be different one than self</source>
@@ -5008,99 +5927,103 @@
     <name>abstract/browserofferinvitation</name>
     <message>
       <source>Name for personal purposes</source>
-      <translation type="unfinished"/>
+      <translation>个人目的的名称</translation>
     </message>
     <message>
       <source>Language, leave empty for all. E.g lit, rus, ger etc...</source>
-      <translation type="unfinished"/>
+      <translation>语言中，所有的假空。例如： 点亮，俄罗斯联邦、 蒙古包等......</translation>
     </message>
     <message>
       <source>Time on site on single page in seconds</source>
-      <translation type="unfinished"/>
+      <translation>在单个页上的网站上时间 （秒）</translation>
     </message>
     <message>
       <source>Priority, the lower the higher</source>
-      <translation type="unfinished"/>
+      <translation>优先、 更低更高</translation>
     </message>
     <message>
       <source>Popup width</source>
-      <translation type="unfinished"/>
+      <translation>弹出窗口宽度</translation>
     </message>
     <message>
       <source>Popup height</source>
-      <translation type="unfinished"/>
+      <translation>弹出窗口高度</translation>
     </message>
     <message>
       <source>Measure units, px or percents</source>
-      <translation type="unfinished"/>
+      <translation>测量单位、 px 或百分数</translation>
     </message>
     <message>
       <source>Referrer domain without www, E.g google keyword will match any of google domain</source>
-      <translation type="unfinished"/>
+      <translation>没有 www 的引用域，例如： google 关键字将匹配任何 google 域</translation>
     </message>
     <message>
       <source>URL, enter * at the end for the wildcard</source>
-      <translation type="unfinished"/>
+      <translation>URL，输入 * 通配符结尾</translation>
     </message>
     <message>
       <source>Custom iframe URL, takes priority over default content</source>
-      <translation type="unfinished"/>
+      <translation>自定义 iframe 的 URL，就会优先于默认内容</translation>
     </message>
     <message>
       <source>Default popup content</source>
-      <translation type="unfinished"/>
+      <translation>默认弹出菜单内容</translation>
+    </message>
+    <message>
+      <source>Callback content, must be valid json</source>
+      <translation>回调的内容，必须能有效 json</translation>
     </message>
     <message>
       <source>Load content in lhc iframe</source>
-      <translation type="unfinished"/>
+      <translation>加载在大型强子对撞机 iframe 中的内容</translation>
     </message>
     <message>
       <source>Active</source>
-      <translation type="unfinished"/>
+      <translation>活动</translation>
     </message>
     <message>
       <source>Identifier, for what identifier this message should be shown, leave empty for all</source>
-      <translation type="unfinished"/>
+      <translation>应显示此消息，什么标识符的标识符，将保留为空的所有</translation>
     </message>
     <message>
       <source>Matched times</source>
-      <translation type="unfinished"/>
+      <translation>匹配时间</translation>
     </message>
     <message>
       <source>Browser offer invitations</source>
-      <translation type="unfinished"/>
+      <translation>浏览器提供的邀请</translation>
     </message>
     <message>
       <source>Content</source>
-      <translation type="unfinished"/>
+      <translation>内容</translation>
     </message>
     <message>
       <source>Name attributes</source>
-      <translation type="unfinished"/>
+      <translation>名称属性</translation>
     </message>
     <message>
       <source>Introduction attributes</source>
-      <translation type="unfinished"/>
+      <translation>介绍属性</translation>
     </message>
     <message>
       <source>XLS Columns</source>
-      <translation type="unfinished"/>
+      <translation>XLS 列</translation>
     </message>
     <message>
       <source>Recipient</source>
-      <translation type="unfinished"/>
+      <translation>收件人</translation>
     </message>
     <message>
       <source>Post content after form is submitted</source>
-      <translation type="unfinished"/>
+      <translation>提交表单后，请发布内容</translation>
     </message>
     <message>
       <source>Custom pagelayout</source>
-      <translation type="unfinished"/>
+      <translation>自定义 pagelayout</translation>
     </message>
     <message>
       <source>Forms list</source>
-      <translation type="unfinished"/>
+      <translation>窗体列表</translation>
     </message>
   </context>
   <context>
@@ -5173,7 +6096,7 @@
     </message>
     <message>
       <source>has redirected user to contact form!</source>
-      <translation type="unfinished"/>
+      <translation>已重定向用户联系人窗体 ！</translation>
     </message>
   </context>
   <context>
@@ -5213,6 +6136,13 @@
     </message>
   </context>
   <context>
+    <name>chat/updatemsguser</name>
+    <message>
+      <source>User has edited his last message</source>
+      <translation>用户已编辑他最后的聊天信息</translation>
+    </message>
+  </context>
+  <context>
     <name>chat/voteaction</name>
     <message>
       <source>Thumbs up</source>
@@ -5239,102 +6169,6 @@
     <message>
       <source>Please enter valid file type!</source>
       <translation>请输入有效的文件类型 ！</translation>
-    </message>
-  </context>
-  <context>
-    <name>form/collected</name>
-    <message>
-      <source>Download XLS</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>URL</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Name</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Intro</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Time</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>IP</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>View</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Download</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Delete</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
-    <name>form/fill</name>
-    <message>
-      <source>Return</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Submit</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Information collected</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>is required</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>invalid date format</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
-    <name>form/index</name>
-    <message>
-      <source>Form</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>List of forms</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Page embed code</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Date</source>
-      <translation type="unfinished"/>
-    </message>
-  </context>
-  <context>
-    <name>form/viewcollected</name>
-    <message>
-      <source>collected information</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Download</source>
-      <translation type="unfinished"/>
-    </message>
-    <message>
-      <source>Collected information</source>
-      <translation type="unfinished"/>
     </message>
   </context>
 </TS>

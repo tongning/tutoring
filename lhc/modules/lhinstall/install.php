@@ -29,11 +29,11 @@ switch ((int)$Params['user_parameters']['step_id']) {
 
 	case '1':
 		$Errors = array();
-		if (!is_writable("cache/cacheconfig/settings.ini.php"))
-	       $Errors[] = "cache/cacheconfig/settings.ini.php is not writable";
+		if (!is_writable("cache/cacheconfig"))
+	       $Errors[] = "cache/cacheconfig is not writable";
 
-	    if (!is_writable("settings/settings.ini.php"))
-	       $Errors[] = "settings/settings.ini.php is not writable";
+	    if (!is_writable("settings/"))
+	       $Errors[] = "settings/ is not writable";
 
 		if (!is_writable("cache/translations"))
 	       $Errors[] = "cache/translations is not writable";
@@ -47,11 +47,20 @@ switch ((int)$Params['user_parameters']['step_id']) {
 		if (!is_writable("var/storage"))
 	       $Errors[] = "var/storage is not writable";
 
+		if (!is_writable("var/storagedocshare"))
+	       $Errors[] = "var/storagedocshare is not writable";
+
 		if (!is_writable("var/storageform"))
 	       $Errors[] = "var/storageform is not writable";
 
 		if (!is_writable("var/userphoto"))
 	       $Errors[] = "var/userphoto is not writable";
+
+		if (!is_writable("var/tmpfiles"))
+	       $Errors[] = "var/tmpfiles is not writable";
+
+		if (!is_writable("var/storagetheme"))
+	       $Errors[] = "var/storagetheme is not writable";
 
 		if (!extension_loaded ('pdo_mysql' ))
 	       $Errors[] = "php-pdo extension not detected. Please install php extension";
@@ -277,8 +286,9 @@ switch ((int)$Params['user_parameters']['step_id']) {
 				  `fbst` tinyint(1) NOT NULL,
 				  `online_user_id` int(11) NOT NULL,
 				  `last_msg_id` int(11) NOT NULL,
-				  `additional_data` varchar(250) NOT NULL,
+				  `additional_data` text NOT NULL,
 				  `timeout_message` varchar(250) NOT NULL,
+				  `user_tz_identifier` varchar(50) NOT NULL,
 				  `lat` varchar(10) NOT NULL,
 				  `lon` varchar(10) NOT NULL,
 				  `city` varchar(100) NOT NULL,
@@ -290,6 +300,7 @@ switch ((int)$Params['user_parameters']['step_id']) {
         	   	  `wait_timeout` int(11) NOT NULL,
         	   	  `wait_timeout_send` int(11) NOT NULL,
   				  `chat_duration` int(11) NOT NULL,
+  				  `tslasign` int(11) NOT NULL,
         	   	  `priority` int(11) NOT NULL,
         	   	  `chat_initiator` int(11) NOT NULL,
         	   	  `transfer_timeout_ts` int(11) NOT NULL,
@@ -298,7 +309,7 @@ switch ((int)$Params['user_parameters']['step_id']) {
         	   	  `na_cb_executed` int(11) NOT NULL,
         	   	  `nc_cb_executed` tinyint(1) NOT NULL,
 				  PRIMARY KEY (`id`),
-				  KEY `status` (`status`),
+				  KEY `status_user_id` (`status`,`user_id`),
 				  KEY `user_id` (`user_id`),
 				  KEY `online_user_id` (`online_user_id`),
 				  KEY `dep_id` (`dep_id`),
@@ -333,6 +344,63 @@ switch ((int)$Params['user_parameters']['step_id']) {
 				  `timeout_message` varchar(250) NOT NULL,
 				  PRIMARY KEY (`id`),
 				  KEY `siteaccess_position` (`siteaccess`,`position`)
+				) DEFAULT CHARSET=utf8;");
+
+        	   $db->query("CREATE TABLE IF NOT EXISTS  `lh_doc_share` (
+				  `id` int(11) NOT NULL AUTO_INCREMENT,
+				  `name` varchar(250) NOT NULL,
+				  `desc` text NOT NULL,
+				  `user_id` int(11) NOT NULL,
+				  `active` int(11) NOT NULL,
+				  `converted` int(11) NOT NULL,
+				  `file_name` varchar(250) NOT NULL,
+				  `file_path` varchar(250) NOT NULL,
+				  `file_name_upload` varchar(250) NOT NULL,
+				  `file_size` int(11) NOT NULL,
+				  `type` varchar(250) NOT NULL,
+				  `ext` varchar(250) NOT NULL,
+				  `pdf_file` varchar(250) NOT NULL,
+				  `pages_pdf_count` int(11) NOT NULL,
+				  `pdf_to_img_converted` int(11) NOT NULL,
+				  PRIMARY KEY (`id`),
+				  KEY `user_id` (`user_id`)
+				) DEFAULT CHARSET=utf8;");
+
+        	   $db->query("CREATE TABLE IF NOT EXISTS `lh_abstract_widget_theme` (
+				 `id` int(11) NOT NULL AUTO_INCREMENT,
+				  `name` varchar(250) NOT NULL,
+				  `onl_bcolor` varchar(10) NOT NULL,
+				  `text_color` varchar(10) NOT NULL,
+				  `bor_bcolor` varchar(10) NOT NULL DEFAULT 'e3e3e3',
+				  `online_image` varchar(250) NOT NULL,
+				  `online_image_path` varchar(250) NOT NULL,
+				  `offline_image` varchar(250) NOT NULL,
+				  `offline_image_path` varchar(250) NOT NULL,
+				  `logo_image` varchar(250) NOT NULL,
+				  `logo_image_path` varchar(250) NOT NULL,
+				  `need_help_image` varchar(250) NOT NULL,
+				  `header_background` varchar(10) NOT NULL,
+				  `need_help_tcolor` varchar(10) NOT NULL,
+				  `need_help_bcolor` varchar(10) NOT NULL,
+				  `need_help_border` varchar(10) NOT NULL,
+				  `need_help_close_bg` varchar(10) NOT NULL,
+				  `need_help_hover_bg` varchar(10) NOT NULL,
+				  `need_help_close_hover_bg` varchar(10) NOT NULL,
+				  `need_help_image_path` varchar(250) NOT NULL,
+				  `custom_status_css` text NOT NULL,
+				  `custom_container_css` text NOT NULL,
+				  `custom_widget_css` text NOT NULL,
+				  `need_help_header` varchar(250) NOT NULL,
+				  `need_help_text` varchar(250) NOT NULL,
+				  `online_text` varchar(250) NOT NULL,
+				  `offline_text` varchar(250) NOT NULL,
+				  `widget_border_color` varchar(10) NOT NULL,
+				  `copyright_image` varchar(250) NOT NULL,
+				  `copyright_image_path` varchar(250) NOT NULL,
+				  `widget_copyright_url` varchar(250) NOT NULL,
+				  `explain_text` text NOT NULL,
+				  `show_copyright` int(11) NOT NULL DEFAULT '1',
+				  PRIMARY KEY (`id`)
 				) DEFAULT CHARSET=utf8;");
 
         	   $db->query("CREATE TABLE IF NOT EXISTS `lh_faq` (
@@ -394,7 +462,8 @@ switch ((int)$Params['user_parameters']['step_id']) {
         	   		(5,	'Chat was closed',	'Live Helper Chat',	0,	'',	0,	'Hello,\r\n\r\n{operator} has closed a chat\r\nName: {name}\r\nEmail: {email}\r\nPhone: {phone}\r\nDepartment: {department}\r\nCountry: {country}\r\nCity: {city}\r\nIP: {ip}\r\n\r\nMessage:\r\n{message}\r\n\r\nAdditional data, if any:\r\n{additional_data}\r\n\r\nURL of page from which user has send request:\r\n{url_request}\r\n\r\nSincerely,\r\nLive Support Team',	'Chat was closed',	0,	'',	0,	'',''),
         	   		(6,	'New FAQ question',	'Live Helper Chat',	0,	'',	0,	'Hello,\r\n\r\nNew FAQ question\r\nEmail: {email}\r\n\r\nQuestion:\r\n{question}\r\n\r\nQuestion URL:\r\n{url_question}\r\n\r\nURL to answer a question:\r\n{url_request}\r\n\r\nSincerely,\r\nLive Support Team',	'New FAQ question',	0,	'',	0,	'',	''),
         	   		(7,	'New unread message',	'Live Helper Chat',	0,	'',	0,	'Hello,\r\n\r\nUser request data:\r\nName: {name}\r\nEmail: {email}\r\nPhone: {phone}\r\nDepartment: {department}\r\nCountry: {country}\r\nCity: {city}\r\nIP: {ip}\r\n\r\nMessage:\r\n{message}\r\n\r\nURL of page from which user has send request:\r\n{url_request}\r\n\r\nClick to accept chat automatically\r\n{url_accept}\r\n\r\nSincerely,\r\nLive Support Team',	'New chat request',	0,	'',	0,	'{$adminEmail}',''),
-        	   		(8,	'Filled form',	'Live Helper Chat',	0,	'',	0,	'Hello,\r\n\r\nUser has filled a form\r\nForm name - {form_name}\r\nUser IP - {ip}\r\nDownload filled data - {url_download}\r\n\r\nSincerely,\r\nLive Support Team','Filled form - {form_name}',	0,	'',	0,	'{$adminEmail}','');");
+        	   		(8,	'Filled form',	'Live Helper Chat',	0,	'',	0,	'Hello,\r\n\r\nUser has filled a form\r\nForm name - {form_name}\r\nUser IP - {ip}\r\nDownload filled data - {url_download}\r\n\r\nSincerely,\r\nLive Support Team','Filled form - {form_name}',	0,	'',	0,	'{$adminEmail}',''),
+        	   		(9,	'Chat was accepted',	'Live Helper Chat',	0,	'',	0,	'Hello,\r\n\r\nOperator {user_name} has accepted a chat [{chat_id}]\r\n\r\nUser request data:\r\nName: {name}\r\nEmail: {email}\r\nPhone: {phone}\r\nDepartment: {department}\r\nCountry: {country}\r\nCity: {city}\r\nIP: {ip}\r\n\r\nMessage:\r\n{message}\r\n\r\nURL of page from which user has send request:\r\n{url_request}\r\n\r\nClick to accept chat automatically\r\n{url_accept}\r\n\r\nSincerely,\r\nLive Support Team',	'Chat was accepted [{chat_id}]',	0,	'',	0,	'{$adminEmail}','');");
 
         	   $db->query("CREATE TABLE IF NOT EXISTS `lh_question` (
         	   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -446,6 +515,7 @@ switch ((int)$Params['user_parameters']['step_id']) {
 				  `siteaccess` varchar(10) NOT NULL,
 				  `time_on_site` int(11) NOT NULL,
 				  `content` longtext NOT NULL,
+				  `callback_content` longtext NOT NULL,
 				  `lhc_iframe_content` tinyint(4) NOT NULL,
 				  `custom_iframe_url` varchar(250) NOT NULL,
 				  `name` varchar(250) NOT NULL,
@@ -508,6 +578,7 @@ switch ((int)$Params['user_parameters']['step_id']) {
         	   	  `department_id` int(11) NOT NULL,
         	   	  `user_id` int(11) NOT NULL,
   				  `delay` int(11) NOT NULL,
+        	   	  `auto_send` tinyint(1) NOT NULL,
                   PRIMARY KEY (`id`),
         	   	  KEY `department_id` (`department_id`),
         	   	  KEY `user_id` (`user_id`)
@@ -546,8 +617,18 @@ switch ((int)$Params['user_parameters']['step_id']) {
         	   ('enable_pending_list', '', ''),
         	   ('enable_active_list', '', ''),
         	   ('enable_close_list', '', ''),
+        	   ('new_user_bn', '', ''),
+        	   ('new_user_sound', '', ''),
+        	   ('oupdate_timeout', '', ''),
+        	   ('ouser_timeout', '', ''),
+        	   ('o_department', '', ''),
+        	   ('omax_rows', '', ''),
+        	   ('ogroup_by', '', ''),
+        	   ('omap_depid', '', ''),
+        	   ('omap_mtimeout', '', ''),
         	   ('enable_unread_list', '', '')");
-
+       	   
+        	   
         	   $db->query("CREATE TABLE IF NOT EXISTS `lh_chat_config` (
                   `identifier` varchar(50) NOT NULL,
                   `value` text NOT NULL,
@@ -565,8 +646,8 @@ switch ((int)$Params['user_parameters']['step_id']) {
                 ('tracked_users_cleanup',	'160',	0,	'How many days keep records of online users.',	0),
         	   	('list_online_operators', '0', '0', 'List online operators.', '0'),
         	   	('voting_days_limit',	'7',	0,	'How many days voting widget should not be expanded after last show',	0),
-                ('track_online_visitors',	'0',	0,	'Enable online site visitors tracking',	0),
-        	   	('pro_active_invite',	'0',	0,	'Is pro active chat invitation active. Online users tracking also has to be enabled',	0),
+                ('track_online_visitors',	'1',	0,	'Enable online site visitors tracking',	0),
+        	   	('pro_active_invite',	'1',	0,	'Is pro active chat invitation active. Online users tracking also has to be enabled',	0),
                 ('customer_company_name',	'Live Helper Chat',	0,	'Your company name - visible in bottom left corner',	0),
                 ('customer_site_url',	'http://livehelperchat.com',	0,	'Your site URL address',	0),
         	   	('smtp_data',	'a:5:{s:4:\"host\";s:0:\"\";s:4:\"port\";s:2:\"25\";s:8:\"use_smtp\";i:0;s:8:\"username\";s:0:\"\";s:8:\"password\";s:0:\"\";}',	0,	'SMTP configuration',	1),
@@ -582,7 +663,7 @@ switch ((int)$Params['user_parameters']['step_id']) {
                 ('ignorable_ip',	'',	0,	'Which ip should be ignored in online users list, separate by comma',0),
                 ('run_departments_workflow', 0, 0, 'Should cronjob run departments transfer workflow, even if user leaves a chat',	0),
                 ('geo_location_data', 'a:3:{s:4:\"zoom\";i:4;s:3:\"lat\";s:7:\"49.8211\";s:3:\"lng\";s:7:\"11.7835\";}', '0', '', '1'),
-                ('xmp_data','a:9:{i:0;b:0;s:4:\"host\";s:15:\"talk.google.com\";s:6:\"server\";s:9:\"gmail.com\";s:8:\"resource\";s:6:\"xmpphp\";s:4:\"port\";s:4:\"5222\";s:7:\"use_xmp\";i:0;s:8:\"username\";s:0:\"\";s:8:\"password\";s:0:\"\";s:11:\"xmp_message\";s:77:\"You have a new chat request\r\n{messages}\r\nClick to accept a chat\r\n{url_accept}\";}',0,'XMP data',1),
+                ('xmp_data','a:14:{i:0;b:0;s:4:\"host\";s:15:\"talk.google.com\";s:6:\"server\";s:9:\"gmail.com\";s:8:\"resource\";s:6:\"xmpphp\";s:4:\"port\";s:4:\"5222\";s:7:\"use_xmp\";i:0;s:8:\"username\";s:0:\"\";s:8:\"password\";s:0:\"\";s:11:\"xmp_message\";s:78:\"New chat request [{chat_id}]\r\n{messages}\r\nClick to accept a chat\r\n{url_accept}\";s:10:\"recipients\";s:0:\"\";s:20:\"xmp_accepted_message\";s:69:\"{user_name} has accepted a chat [{chat_id}]\r\n{messages}\r\n{url_accept}\";s:16:\"use_standard_xmp\";i:0;s:15:\"test_recipients\";s:0:\"\";s:21:\"test_group_recipients\";s:0:\"\";}',0,'XMP data',1),
                 ('run_unaswered_chat_workflow', 0, 0, 'Should cronjob run unanswered chats workflow and execute unaswered chats callback, 0 - no, any other number bigger than 0 is a minits how long chat have to be not accepted before executing callback.',0),
                 ('disable_popup_restore', 0, 0, 'Disable option in widget to open new window. Restore icon will be hidden',	0),
                 ('accept_tos_link', '#', 0, 'Change to your site Terms of Service', 0),
@@ -603,7 +684,25 @@ switch ((int)$Params['user_parameters']['step_id']) {
                 ('disable_send','0',0,'Disable chat transcript send', '0'),
                 ('ignore_user_status','0',0,'Ignore users online statuses and use departments online hours', '0'),
                 ('bbc_button_visible','1',0,'Show BB Code button', '0'),
-                ('geo_data', '', '0', '', '1')");
+                ('allow_reopen_closed','1', 0, 'Allow user to reopen closed chats?', '0'),
+                ('reopen_as_new','1', 0, 'Reopen closed chat as new? Otherwise it will be reopened as active.', '0'),
+                ('default_theme_id','0', 0, 'Default theme ID.', '1'),
+                ('doc_sharer',	'a:10:{i:0;b:0;s:17:\"libre_office_path\";s:20:\"/usr/bin/libreoffice\";s:19:\"supported_extension\";s:51:\"ppt,pptx,doc,odp,docx,xlsx,txt,xls,xlsx,pdf,rtf,odt\";s:18:\"background_process\";i:1;s:13:\"max_file_size\";i:4;s:13:\"pdftoppm_path\";s:17:\"/usr/bin/pdftoppm\";s:13:\"PdftoppmLimit\";i:5;s:14:\"pdftoppm_limit\";i:0;s:14:\"http_user_name\";s:6:\"apache\";s:20:\"http_user_group_name\";s:6:\"apache\";}',	0,	'Libreoffice path',	1),
+                ('disable_html5_storage','1',0,'Disable HMTL5 storage, check it if your site is switching between http and https', '0'),
+                ('automatically_reopen_chat','1',0,'Automatically reopen chat on widget open', '0'),
+                ('autoclose_timeout','0', 0, 'Automatic chats closing. 0 - disabled, n > 0 time in minutes before chat is automatically closed', '0'),
+                ('autopurge_timeout','0', 0, 'Automatic chats purging. 0 - disabled, n > 0 time in minutes before chat is automatically deleted', '0'),
+                ('update_ip',	'127.0.0.1',	0,	'Which ip should be allowed to update DB by executing http request, separate by comma?',0),
+                ('track_if_offline',	'0',	0,	'Track online visitors even if there is no online operators',0),
+                ('min_phone_length','8',0,'Minimum phone number length',0),
+                ('mheight','',0,'Messages box height',0),
+                ('suggest_leave_msg','1',0,'Suggest user to leave a message then user chooses offline department',0),
+                ('checkstatus_timeout','0',0,'Interval between chat status checks in seconds, 0 disabled.',0),
+                ('show_language_switcher','0',0,'Show users option to switch language at widget',0),
+                ('track_is_online','0',0,'Track is user still on site, chat status checks also has to be enabled',0),
+				('show_languages','eng,lit,hrv,esp,por,nld,ara,ger,pol,rus,ita,fre,chn,cse,nor,tur,vnm,idn,sve,per,ell,dnk,rou,bgr,tha,geo,fin,alb',0,'Between what languages user should be able to switch',0),
+                ('geoadjustment_data',	'a:8:{i:0;b:0;s:18:\"use_geo_adjustment\";b:0;s:13:\"available_for\";s:0:\"\";s:15:\"other_countries\";s:6:\"custom\";s:8:\"hide_for\";s:0:\"\";s:12:\"other_status\";s:7:\"offline\";s:11:\"rest_status\";s:6:\"hidden\";s:12:\"apply_widget\";i:0;}',	0,	'Geo adjustment settings',	1),
+                ('geo_data','a:5:{i:0;b:0;s:21:\"geo_detection_enabled\";i:1;s:22:\"geo_service_identifier\";s:8:\"max_mind\";s:23:\"max_mind_detection_type\";s:7:\"country\";s:22:\"max_mind_city_location\";s:37:\"var/external/geoip/GeoLite2-City.mmdb\";}',0,'',1)");
 
         	   
         	   
@@ -623,10 +722,12 @@ switch ((int)$Params['user_parameters']['step_id']) {
         	   	  `pages_count` int(11) NOT NULL,
         	   	  `tt_pages_count` int(11) NOT NULL,
         	   	  `invitation_count` int(11) NOT NULL,
+        	   	  `last_check_time` int(11) NOT NULL,
         	   	  `dep_id` int(11) NOT NULL,
                   `user_agent` varchar(250) NOT NULL,
                   `user_country_code` varchar(50) NOT NULL,
                   `user_country_name` varchar(50) NOT NULL,
+                  `visitor_tz` varchar(50) NOT NULL,
                   `operator_message` varchar(250) NOT NULL,
                   `operator_user_proactive` varchar(100) NOT NULL,
                   `operator_user_id` int(11) NOT NULL,
@@ -640,6 +741,7 @@ switch ((int)$Params['user_parameters']['step_id']) {
   				  `tt_time_on_site` int(11) NOT NULL,
         	   	  `requires_email` int(11) NOT NULL,
         	   	  `requires_username` int(11) NOT NULL,
+        	   	  `requires_phone` int(11) NOT NULL,
         	   	  `screenshot_id` int(11) NOT NULL,
         	   	  `identifier` varchar(50) NOT NULL,
         	   	  `operation` varchar(200) NOT NULL,
@@ -671,6 +773,7 @@ switch ((int)$Params['user_parameters']['step_id']) {
         	   	  `identifier` varchar(50) NOT NULL,
         	   	  `requires_email` int(11) NOT NULL,
         	   	  `requires_username` int(11) NOT NULL,
+        	   	  `requires_phone` int(11) NOT NULL,
 				  PRIMARY KEY (`id`),
 				  KEY `time_on_site_pageviews_siteaccess_position` (`time_on_site`,`pageviews`,`siteaccess`,`identifier`,`position`),
         	      KEY `identifier` (`identifier`),
@@ -700,6 +803,8 @@ switch ((int)$Params['user_parameters']['step_id']) {
 				  `disabled` int(11) NOT NULL,
 				  `hidden` int(11) NOT NULL,
 				  `delay_lm` int(11) NOT NULL,
+				  `max_active_chats` int(11) NOT NULL,
+				  `max_timeout_seconds` int(11) NOT NULL,
 				  `identifier` varchar(50) NOT NULL,
 				  `mod` tinyint(1) NOT NULL,
 				  `tud` tinyint(1) NOT NULL,
@@ -708,7 +813,10 @@ switch ((int)$Params['user_parameters']['step_id']) {
 				  `frd` tinyint(1) NOT NULL,
 				  `sad` tinyint(1) NOT NULL,
 				  `sud` tinyint(1) NOT NULL,
+				  `nc_cb_execute` tinyint(1) NOT NULL,
+				  `na_cb_execute` tinyint(1) NOT NULL,
 				  `inform_unread` tinyint(1) NOT NULL,
+				  `active_balancing` tinyint(1) NOT NULL,
 				  `start_hour` int(2) NOT NULL,
 				  `end_hour` int(2) NOT NULL,
 				  `inform_close` int(11) NOT NULL,
@@ -819,19 +927,21 @@ switch ((int)$Params['user_parameters']['step_id']) {
 
                 // User departaments
                 $db->query("CREATE TABLE IF NOT EXISTS `lh_userdep` (
-                  `id` int(11) NOT NULL AUTO_INCREMENT,
-                  `user_id` int(11) NOT NULL,
-                  `dep_id` int(11) NOT NULL,
-                  `last_activity` int(11) NOT NULL,
-                  `hide_online` int(11) NOT NULL,
-                  PRIMARY KEY (`id`),
-                  KEY `user_id` (`user_id`),
-                  KEY `last_activity_hide_online_dep_id` (`last_activity`,`hide_online`,`dep_id`),
-                  KEY `dep_id` (`dep_id`)
-                ) DEFAULT CHARSET=utf8;");
+				  `id` int(11) NOT NULL AUTO_INCREMENT,
+				  `user_id` int(11) NOT NULL,
+				  `dep_id` int(11) NOT NULL,
+				  `last_activity` int(11) NOT NULL,
+				  `hide_online` int(11) NOT NULL,
+				  `last_accepted` int(11) NOT NULL,
+				  `active_chats` int(11) NOT NULL,
+				  PRIMARY KEY (`id`),
+				  KEY `user_id` (`user_id`),
+				  KEY `last_activity_hide_online_dep_id` (`last_activity`,`hide_online`,`dep_id`),
+				  KEY `dep_id` (`dep_id`)
+				) DEFAULT CHARSET=utf8;");
 
                 // Insert record to departament instantly
-                $db->query("INSERT INTO `lh_userdep` (`user_id`,`dep_id`,`last_activity`,`hide_online`) VALUES ({$UserData->id},0,0,0)");
+                $db->query("INSERT INTO `lh_userdep` (`user_id`,`dep_id`,`last_activity`,`hide_online`,`last_accepted`,`active_chats`) VALUES ({$UserData->id},0,0,0,0,0)");
 
                 // Transfer chat
                 $db->query("CREATE TABLE IF NOT EXISTS `lh_transfer` (
@@ -930,6 +1040,7 @@ switch ((int)$Params['user_parameters']['step_id']) {
                     array('module' => 'lhsystem','function' => 'changelanguage'),
                     array('module' => 'lhchat',  'function' => 'allowtransfer'),
                     array('module' => 'lhchat',  'function' => 'administratecannedmsg'),
+                    array('module' => 'lhchat',  'function' => 'sees_all_online_visitors'),
                     array('module' => 'lhquestionary',  'function' => 'manage_questionary'),
                     array('module' => 'lhfaq',   		'function' => 'manage_faq'),
                     array('module' => 'lhchatbox',   	'function' => 'manage_chatbox'),

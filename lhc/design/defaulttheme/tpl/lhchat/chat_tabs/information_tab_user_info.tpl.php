@@ -40,6 +40,15 @@
 		<td><img src="<?php echo erLhcoreClassDesign::design('images/flags')?>/<?php echo $chat->country_code?>.png" alt="<?php echo htmlspecialchars($chat->country_name)?>" title="<?php echo htmlspecialchars($chat->country_name)?>" /></td>
 	</tr>
 	<?php endif;?>
+	
+	<?php if ( !empty($chat->user_tz_identifier) ) : ?>
+	<tr>
+		<td><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/adminchat','Time zone')?></td>
+		<td><?php echo htmlspecialchars($chat->user_tz_identifier)?>, <?php echo htmlspecialchars($chat->user_tz_identifier_time)?></td>
+	</tr>
+	<?php endif;?>
+	
+	
 	<?php if ( !empty($chat->city) ) : ?>
 	<tr>
 		<td><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/adminchat','City')?></td>
@@ -83,7 +92,17 @@
 	<?php if (!empty($chat->additional_data)) : ?>
 	<tr>
 		<td><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/adminchat','Additional data')?></td>
-		<td><?php echo htmlspecialchars($chat->additional_data)?></td>
+		<td>		
+		<?php if (is_array($chat->additional_data_array)) : ?>
+			<ul class="circle mb0">
+				<?php foreach ($chat->additional_data_array as $addItem) : ?>
+				<li><?php echo htmlspecialchars($addItem->key)?> - <?php echo htmlspecialchars($addItem->value)?></li>
+				<?php endforeach;?>
+			</ul>
+		<?php else : ?>
+		<?php echo htmlspecialchars($chat->additional_data)?>
+		<?php endif;?>
+		</td>
 	</tr>
 	<?php endif;?>
 	<tr>
@@ -130,7 +149,7 @@
 			
 		<a target="_blank" href="<?php echo erLhcoreClassDesign::baseurl('chat/printchatadmin')?>/<?php echo $chat->id?>" class="icon-print" title="<?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/adminchat','Print')?>"></a>
 		
-		<a class="icon-attach" onclick="lhinst.attatchLinkToFile('<?php echo $chat->id?>')" title="<?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/adminchat','Attatch uploaded file')?>"></a>
+		<a class="icon-attach" onclick="lhinst.attatchLinkToFile('<?php echo $chat->id?>')" title="<?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('chat/adminchat','Attach uploaded file')?>"></a>
 		
 	</p>
 	<?php else : ?>

@@ -4,12 +4,8 @@ class erLhcoreClassModule{
 
     static function runModule()
     {
-
-
         if (isset(self::$currentModule[self::$currentView]))
         {
-        	
-
             $Params = array();
             $Params['module'] = self::$currentModule[self::$currentView];
             $Params['module']['name'] = self::$currentModule;
@@ -87,16 +83,22 @@ class erLhcoreClassModule{
             	} elseif (self::$defaultTimeZone != '') {            	
             		date_default_timezone_set(self::$defaultTimeZone);
             	}
-            	            	
-            	$includeStatus = include(self::getModuleFile(self::$currentModuleName,self::$currentView));
 
+            	self::attatchExtensionListeners();
+            	
+            	$includeStatus = @include(self::getModuleFile());
+            	
             	// Inclusion failed
             	if ($includeStatus === false) {
             		$CacheManager = erConfigClassLhCacheConfig::getInstance();
             		$CacheManager->expireCache();
 
             		// Just try reinclude
-            		@include(self::getModuleFile(self::$currentModuleName,self::$currentView));
+            		@include(self::getModuleFile(true));
+            		if (!isset($Result)) {
+            			self::redirect( self::$currentModuleName . '/' . self::$currentView);
+            			exit;
+            		}
             	}
 
             } catch (Exception $e) {
@@ -139,6 +141,22 @@ class erLhcoreClassModule{
         }
     }
 
+    public static function attatchExtensionListeners(){
+    	$cfg = erConfigClassLhConfig::getInstance();
+    	$extensions = $cfg->getSetting('site','extensions');
+    	
+    	// Is it extension module
+    	foreach ($extensions as $extension)
+    	{
+    		if (file_exists('extension/'.$extension.'/bootstrap/bootstrap.php')){
+    			include('extension/'.$extension.'/bootstrap/bootstrap.php');
+    			$className = 'erLhcoreClassExtension'.ucfirst($extension);
+    			$class = new $className();
+    			$class->run();
+    		}
+    	}    	
+    }
+    
     public static function getModuleDefaultView($module)
     {
         $cfg = erConfigClassLhConfig::getInstance();
@@ -162,12 +180,12 @@ class erLhcoreClassModule{
         return false;
     }
 
-    public static function getModuleFile() {
+    public static function getModuleFile($disableCacheManually = false) {
 
         $cfg = erConfigClassLhConfig::getInstance();
         $cacheEnabled = $cfg->getSetting( 'site', 'modulecompile' );
 
-        if ($cacheEnabled === false) {
+        if ($cacheEnabled === false || $disableCacheManually === true) {
             return self::$currentModule[self::$currentView]['script_path'];
         } else {
 
@@ -238,28 +256,42 @@ class erLhcoreClassModule{
 				$contentFile = str_replace($Matches[0][$key],$valueReplace,$contentFile);
 			}
 
-			// Compile config settings
-            $Matches = array();
-            preg_match_all('/erLhcoreClassModelChatConfig::fetch\((\s?)\'([a-zA-Z0-9-\.-\/\_]+)\'(\s?)\)->current_value/i',$contentFile,$Matches);
-            foreach ($Matches[1] as $key => $UrlAddress)
-            {
-                $valueConfig = erLhcoreClassModelChatConfig::fetch($Matches[2][$key])->current_value;
-                $valueReplace = '';
-                $valueReplace = '\''.str_replace("'","\'",$valueConfig).'\'';
-                $contentFile = str_replace($Matches[0][$key],$valueReplace,$contentFile);
-            }
-
+			if (self::$cacheDbVariables === true) {
+			
+				// Compile config settings
+	            $Matches = array();
+	            preg_match_all('/erLhcoreClassModelChatConfig::fetch\((\s?)\'([a-zA-Z0-9-\.-\/\_]+)\'(\s?)\)->current_value/i',$contentFile,$Matches);
+	            foreach ($Matches[1] as $key => $UrlAddress)
+	            {
+	                $valueConfig = erLhcoreClassModelChatConfig::fetch($Matches[2][$key])->current_value;
+	                $valueReplace = '';
+	                $valueReplace = '\''.str_replace("'","\'",$valueConfig).'\'';
+	                $contentFile = str_replace($Matches[0][$key],$valueReplace,$contentFile);
+	            }
+		            
+	            // Compile config settings in php scripts
+	            $Matches = array();
+	            preg_match_all('/erLhcoreClassModelChatConfig::fetch\((\s?)\'([a-zA-Z0-9-\.-\/\_]+)\'(\s?)\)->data_value/i',$contentFile,$Matches);
+	            foreach ($Matches[1] as $key => $UrlAddress)
+	            {
+	            	$valueConfig = erLhcoreClassModelChatConfig::fetch($Matches[2][$key])->data_value;
+	            	$valueReplace = var_export($valueConfig,true);
+	            	$contentFile = str_replace($Matches[0][$key],$valueReplace,$contentFile);
+	            }
+	            	            
+	            // Compile config settings array
+	            $Matches = array();
+	            preg_match_all('/erLhcoreClassModelChatConfig::fetch\((\s?)\'([a-zA-Z0-9-\.-\/\_]+)\'(\s?)\)->data\[\'([a-zA-Z0-9-\.-\/\_]+)\'\]/i',$contentFile,$Matches);
+	            foreach ($Matches[1] as $key => $UrlAddress)
+	            {
+	            	$valueConfig = erLhcoreClassModelChatConfig::fetch($Matches[2][$key])->data[$Matches[4][$key]];
+	            	$valueReplace = '';
+	            	$valueReplace = '\''.str_replace("'","\'",$valueConfig).'\'';
+	            	$contentFile = str_replace($Matches[0][$key],$valueReplace,$contentFile);
+	            }
+			}
             
-            // Compile config settings array
-            $Matches = array();
-            preg_match_all('/erLhcoreClassModelChatConfig::fetch\((\s?)\'([a-zA-Z0-9-\.-\/\_]+)\'(\s?)\)->data\[\'([a-zA-Z0-9-\.-\/\_]+)\'\]/i',$contentFile,$Matches);
-            foreach ($Matches[1] as $key => $UrlAddress)
-            {
-            	$valueConfig = erLhcoreClassModelChatConfig::fetch($Matches[2][$key])->data[$Matches[4][$key]];
-            	$valueReplace = '';
-            	$valueReplace = '\''.str_replace("'","\'",$valueConfig).'\'';
-            	$contentFile = str_replace($Matches[0][$key],$valueReplace,$contentFile);
-            }
+            
             
             $fileCompiled = 'cache/compiledtemplates/'.md5($file.$instance->WWWDirLang.'_'.$instance->Language).'.php';
 
@@ -394,8 +426,7 @@ class erLhcoreClassModule{
     {
         header('Location: '. erLhcoreClassDesign::baseurl($url).$appendURL );
     }
-
-    static private $defaultTimeZone = NULL;
+    
     static private $currentModule = NULL;
     static private $currentModuleName = NULL;
     static private $currentView = NULL;
@@ -403,6 +434,11 @@ class erLhcoreClassModule{
     static private $cacheInstance = NULL;
     static private $cacheVersionSite = NULL;
     
+    // Should we cache cache config variables
+    // Instance version of chat should not cache, because each customer can have a different one
+    public static $cacheDbVariables = true;    
+    
+    public static $defaultTimeZone = NULL;
     public static $dateFormat = NULL;
     public static $dateHourFormat = NULL;
     public static $dateDateHourFormat = NULL;

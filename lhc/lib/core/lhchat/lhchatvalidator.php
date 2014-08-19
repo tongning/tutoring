@@ -60,7 +60,12 @@ class erLhcoreClassChatValidator {
         }
 
         $validationFields['DepartamentID'] = new ezcInputFormDefinitionElement(ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 1));
-
+        $validationFields['DepartmentIDDefined'] = new ezcInputFormDefinitionElement(ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 1),FILTER_REQUIRE_ARRAY);
+        $validationFields['operator'] = new ezcInputFormDefinitionElement(ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 1));
+        $validationFields['user_timezone'] = new ezcInputFormDefinitionElement(ezcInputFormDefinitionElement::OPTIONAL, 'int');
+        
+        
+        
         $validationFields['name_items'] = new ezcInputFormDefinitionElement(
         		ezcInputFormDefinitionElement::OPTIONAL, 'unsafe_raw',
         		null,
@@ -92,6 +97,12 @@ class erLhcoreClassChatValidator {
         );
 
         $validationFields['value_show'] = new ezcInputFormDefinitionElement(
+        		ezcInputFormDefinitionElement::OPTIONAL, 'string',
+        		null,
+        		FILTER_REQUIRE_ARRAY
+        );
+
+        $validationFields['hattr'] = new ezcInputFormDefinitionElement(
         		ezcInputFormDefinitionElement::OPTIONAL, 'string',
         		null,
         		FILTER_REQUIRE_ARRAY
@@ -181,7 +192,7 @@ class erLhcoreClassChatValidator {
         // Validate phone
         if (isset($validationFields['Phone'])) {
 
-            if ( !$form->hasValidData( 'Phone' ) || ($form->Phone == '' && ( ($start_data_fields['phone_require_option'] == 'required' && !isset($additionalParams['offline'])) || (isset($additionalParams['offline']) && isset($start_data_fields['offline_phone_require_option']) && $start_data_fields['offline_phone_require_option'] == 'required')  ))) {
+            if ( !$form->hasValidData( 'Phone' ) || (($form->Phone == '' || mb_strlen($form->Phone) < erLhcoreClassModelChatConfig::fetch('min_phone_length')->current_value) && ( ($start_data_fields['phone_require_option'] == 'required' && !isset($additionalParams['offline'])) || (isset($additionalParams['offline']) && isset($start_data_fields['offline_phone_require_option']) && $start_data_fields['offline_phone_require_option'] == 'required')  ))) {
                 $Errors[] = erTranslationClassLhTranslation::getInstance()->getTranslation('chat/startchat','Please enter your phone');
             } elseif ($form->hasValidData( 'Phone' )) {
                 $chat->phone = $inputForm->phone = $form->Phone;
@@ -192,7 +203,24 @@ class erLhcoreClassChatValidator {
                 $Errors[] = erTranslationClassLhTranslation::getInstance()->getTranslation('chat/startchat','Maximum 100 characters for phone');
             }
         }
-
+        
+        if ($form->hasValidData( 'operator' ) && erLhcoreClassModelUser::getUserCount(array('filter' => array('id' => $form->operator, 'disabled' => 0))) > 0) {
+        	$inputForm->operator = $chat->user_id = $form->operator;
+        }
+        
+        if ($form->hasValidData( 'user_timezone' )) {        	
+        	$timezone_name = timezone_name_from_abbr(null, $form->user_timezone*3600, true);        	
+        	if ($timezone_name !== false){
+        		$chat->user_tz_identifier = $timezone_name;
+        	} else {
+        		$chat->user_tz_identifier = '';
+        	}
+        }
+        
+        if ($form->hasValidData( 'DepartmentIDDefined' )) {        	
+        	$inputForm->departament_id_array = $form->DepartmentIDDefined;
+        }
+        
         if ($form->hasValidData( 'DepartamentID' ) && erLhcoreClassModelDepartament::getCount(array('filter' => array('id' => $form->DepartamentID,'disabled' => 0))) > 0) {
         	$chat->dep_id = $form->DepartamentID;
         } elseif ($chat->dep_id == 0 || erLhcoreClassModelDepartament::getCount(array('filter' => array('id' => $chat->dep_id,'disabled' => 0))) == 0) {
@@ -255,19 +283,26 @@ class erLhcoreClassChatValidator {
         		$inputForm->value_show = $form->value_show;
         	}
 
+        	if ( $form->hasValidData( 'hattr' ) && !empty($form->hattr))
+        	{
+        		$inputForm->hattr = $form->hattr;
+        	}
+
         	$inputForm->name_items = $form->name_items;
 
         	$stringParts = array();
         	foreach ($form->name_items as $key => $name_item) {    
         		if (isset($inputForm->values_req[$key]) && $inputForm->values_req[$key] == 't' && ($inputForm->value_show[$key] == 'b' || $inputForm->value_show[$key] == (isset($additionalParams['offline']) ? 'off' : 'on')) && (!isset($valuesArray[$key]) || trim($valuesArray[$key]) == '')) {
         			$Errors[] = trim($name_item).' : '.erTranslationClassLhTranslation::getInstance()->getTranslation('chat/startchat','is required');
-        		}      		
-        		$stringParts[] = trim($name_item).' - '.(isset($valuesArray[$key]) ? trim($valuesArray[$key]) : '-');
+        		}
+        		$stringParts[] = array('key' => $name_item,'value' => (isset($valuesArray[$key]) ? trim($valuesArray[$key]) : ''));
         	}
 
-        	$chat->additional_data = implode(', ', $stringParts);
+        	$chat->additional_data = json_encode($stringParts);
         }
 
+        erLhcoreClassChatEventDispatcher::getInstance()->dispatch('chat.validate_start_chat',array('errors' => & $Errors, 'input_form' => & $inputForm, 'start_data_fields' => & $start_data_fields, 'chat' => & $chat,'additional_params' => & $additionalParams));
+        
         return $Errors;
     }
 
